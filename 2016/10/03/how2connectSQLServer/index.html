@@ -7,7 +7,7 @@
 
     
 
-    <title>归档：2016 | 专注Web前端开发技术</title>
+    <title>如何通过IP访问本地数据库？——SQL SERVER | 专注Web前端开发技术</title>
     <meta name="author" content="Li Haitao">
     
     <meta name="description" content="HTML CSS JavaScript">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="如何通过IP访问本地数据库？——SQL SERVER"/>
     <meta property="og:site_name" content="李海涛个人博客"/>
 
     
@@ -193,58 +193,84 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper green">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>如何通过IP访问本地数据库？——SQL SERVER</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="red-link-context" datetime="2016-10-03T03:13:39.000Z"><a href="/2016/10/03/how2connectSQLServer/">2016-10-03</a></time>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/教程/" class="chip red lighten-1">教程</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2016
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2016/10/03/how2connectSQLServer/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-10-03T03:13:39.000Z">2016-10-03</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                如何通过IP访问本地数据库？——SQL SERVER
-                            </a>
-                        
-                            <a href="/2016/09/15/markdown-grammar/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-09-15T06:32:26.000Z">2016-09-15</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Markdown语法入门
-                            </a>
-                        
-                            <a href="/2016/09/13/My-First-Blog/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-09-13T12:39:13.000Z">2016-09-13</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                个人技术博客V1.0.0发布
-                            </a>
-                        
-                            <a href="/2016/09/13/hello-world/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-09-13T05:10:58.811Z">2016-09-13</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Hello World
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
+            <a href="/tags/SQL/" class="chip red lighten-1">SQL</a>
         
-    </ul>
+    </div>
+
+
+            <div class="toc red-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第一步：安装"><span class="section table-of-contents-text">第一步：安装</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第二步：验证"><span class="section table-of-contents-text">第二步：验证</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第三步，网络配置"><span class="section table-of-contents-text">第三步，网络配置</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#第一个问题：安装Telnet客户端"><span class="section table-of-contents-text">第一个问题：安装Telnet客户端</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#第二个问题：配置SQL-Server-的IP地址"><span class="section table-of-contents-text">第二个问题：配置SQL Server 的IP地址</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第四步，总结"><span class="section table-of-contents-text">第四步，总结</span></a></li></ol>
+</div>
+
+
+            <div class="entry red-link-context">
+                <p><img src="http://odfmmgexx.bkt.clouddn.com/SQL.jpg" alt="image"></p>
+<p>由于这学期做的很多作业都需要操作数据库，可能很多同学都不太清楚如何连接数据库，遇到问题也不知道如何去解决，现在就把我在平时解决问题的思路写下来，希望能够帮到其他同学解决类似的问题。</p>
+<a id="more"></a>
+<h2 id="第一步：安装"><a href="#第一步：安装" class="headerlink" title="第一步：安装"></a>第一步：安装</h2><p>首先确定自己安装了VS和SQL SERVER，至于安装教程，请自行百度或者谷歌，这里就在不赘述了。</p>
+<h2 id="第二步：验证"><a href="#第二步：验证" class="headerlink" title="第二步：验证"></a>第二步：验证</h2><p>打开命名行工具，输入如下命令进行验证：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">telnet 127.0.0.1 1433</div></pre></td></tr></table></figure>
+<p>此时，如果返回“telnet不是内部或者外部命令······”，则说明Telnet客户端没有安装；如果返回”连接失败”，则说明无法通过IP地址访问，1433是SQL Server的默认端口号。</p>
+<h2 id="第三步，网络配置"><a href="#第三步，网络配置" class="headerlink" title="第三步，网络配置"></a>第三步，网络配置</h2><p>这一步解决第二步发现的两个问题。</p>
+<h3 id="第一个问题：安装Telnet客户端"><a href="#第一个问题：安装Telnet客户端" class="headerlink" title="第一个问题：安装Telnet客户端"></a>第一个问题：安装Telnet客户端</h3><p>依次打开“控制面板”→“打开或关闭Windows功能”，安装“Telnet客户端”即可。</p>
+<h3 id="第二个问题：配置SQL-Server-的IP地址"><a href="#第二个问题：配置SQL-Server-的IP地址" class="headerlink" title="第二个问题：配置SQL Server 的IP地址"></a>第二个问题：配置SQL Server 的IP地址</h3><p>打开SQL Server配置管理器，展开“SQL Server网络配置”，选择“SQLEXPRESS的协议”节点。</p>
+<ol>
+<li><p>首先启用“TCP/IP协议”</p>
+</li>
+<li><p>双击“TCP/IP”，设置IP地址为“192.168.1.103”与“127.0.0.1”中“已启用”为“是”，其中“192.168.1.103”是本地IP地址</p>
+</li>
+<li><p>找到IPAll，设置端口号为：1433。</p>
+</li>
+<li><p>重启SQL Server。</p>
+</li>
+<li><p>重启成功后，在命令行工具里再次输入如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">telnet 127.0.0.1 1433</div></pre></td></tr></table></figure>
+<p>若命令行窗口出现一条闪烁的下划线，则说明配置成功，可通过IP地址访问本机的SQL Server数据库服务器。</p>
+<p>​</p>
+</li>
+</ol>
+<h2 id="第四步，总结"><a href="#第四步，总结" class="headerlink" title="第四步，总结"></a>第四步，总结</h2><p>其实这些步骤都很简单，很多问题前人的学习之路已经问过很多遍了，当我们遇到类似的问题，完全可以通过搜索引擎解决，这里没有一步步的截图，因为我觉得没必要。</p>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
