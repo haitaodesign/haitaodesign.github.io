@@ -7,7 +7,7 @@
 
     
 
-    <title>归档 | 专注Web前端开发技术</title>
+    <title>布局相关——display属性 | 专注Web前端开发技术</title>
     <meta name="author" content="Li Haitao">
     
     <meta name="description" content="HTML CSS JavaScript">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="布局相关——display属性"/>
     <meta property="og:site_name" content="李海涛个人博客"/>
 
     
@@ -193,70 +193,87 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper green">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>布局相关——display属性</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="red-link-context" datetime="2016-10-11T07:18:27.000Z"><a href="/2016/10/11/CSS-display/">2016-10-11</a></time>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/CSS/" class="chip red lighten-1">CSS</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2016
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2016/10/11/CSS-display/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-10-11T07:18:27.000Z">2016-10-11</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                布局相关——display属性
-                            </a>
-                        
-                            <a href="/2016/10/07/New-Planing/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-10-07T11:15:25.000Z">2016-10-07</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                每日必做三件事情规划
-                            </a>
-                        
-                            <a href="/2016/10/03/how2connectSQLServer/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-10-03T03:13:39.000Z">2016-10-03</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                如何通过IP访问本地数据库？——SQL SERVER
-                            </a>
-                        
-                            <a href="/2016/09/15/markdown-grammar/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-09-15T06:32:26.000Z">2016-09-15</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Markdown语法入门
-                            </a>
-                        
-                            <a href="/2016/09/13/My-First-Blog/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-09-13T12:39:13.000Z">2016-09-13</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                个人技术博客V1.0.0发布
-                            </a>
-                        
-                            <a href="/2016/09/13/hello-world/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-09-13T05:10:58.811Z">2016-09-13</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Hello World
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
+            <a href="/tags/学习笔记/" class="chip red lighten-1">学习笔记</a>
         
-    </ul>
+    </div>
+
+
+            <div class="toc red-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#什么是布局？"><span class="section table-of-contents-text">什么是布局？</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#display属性值以及特性？"><span class="section table-of-contents-text">display属性值以及特性？</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#display：block"><span class="section table-of-contents-text">display：block</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#display-inline"><span class="section table-of-contents-text">display: inline</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#display-inline-block"><span class="section table-of-contents-text">display: inline-block</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#display-none"><span class="section table-of-contents-text">display: none</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#总结："><span class="section table-of-contents-text">总结：</span></a></li></ol>
+</div>
+
+
+            <div class="entry red-link-context">
+                <blockquote>
+<p>制造问题的思维方式无法用来解决问题。——阿尔伯特 · 爱因斯坦</p>
+</blockquote>
+<h2 id="什么是布局？"><a href="#什么是布局？" class="headerlink" title="什么是布局？"></a>什么是布局？</h2><p>布局是元素的摆放模式，将元素以正确的大小摆放在正确的位置上。</p>
+<a id="more"></a>
+<h2 id="display属性值以及特性？"><a href="#display属性值以及特性？" class="headerlink" title="display属性值以及特性？"></a>display属性值以及特性？</h2><p>display: block | inline | inline-block | none</p>
+<h3 id="display：block"><a href="#display：block" class="headerlink" title="display：block"></a>display：block</h3><ol>
+<li>块级元素（默认块级元素有div,h1,ul,p,form…）</li>
+<li>默认宽度为元素宽度</li>
+<li>可设置宽高</li>
+<li>换行显示</li>
+</ol>
+<h3 id="display-inline"><a href="#display-inline" class="headerlink" title="display: inline"></a>display: inline</h3><ol>
+<li>行级元素（默认行级元素有span,a,label…）</li>
+<li>默认宽度为内容宽度</li>
+<li>不可设置宽高</li>
+<li>同行显示（后面元素超出父元素宽度，元素内换行）</li>
+</ol>
+<h3 id="display-inline-block"><a href="#display-inline-block" class="headerlink" title="display: inline-block"></a>display: inline-block</h3><ol>
+<li>默认宽度为内容宽度</li>
+<li>可设置宽高</li>
+<li>同行显示（后面的元素超出父元素宽度，则整块换行）</li>
+<li>垂直居中（vertical-align:middle）</li>
+</ol>
+<h3 id="display-none"><a href="#display-none" class="headerlink" title="display: none"></a>display: none</h3><ol>
+<li>元素不显示（不占据页面的位置）</li>
+<li>visibility: hidden;(元素同样不显示，但会占据页面原来的位置)</li>
+</ol>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>这些特性平时使用的时候容易混淆，好几次使用的时候都是在哪里一个个尝试什么效果，回过头来再看看这些理论的内容，真的是相见恨晚，弄清楚这些特性再去动手做，会减少很多困难，节省时间。</p>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
