@@ -29,11 +29,32 @@ body {
   <body class="quarkdown quarkdown-plain">
     <aside class="margin-area" id="margin-area-left"></aside>
     <main><p></p><style data-hidden="">:root { --qd-background-color: #fafafa !important; --qd-main-color: #18181b !important; --qd-heading-color: #09090b !important; --qd-heading-font-size: 1.2em !important; --qd-link-color: #6366f1 !important; }</style><style data-hidden="">/* Light base + dark/zinc & purple accents */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400 !important;500;600;700;800&display=swap');
+/* Use Outfit from setup.qd (.font); avoid @import here — Quarkdown breaks the URL when inlining. */
 
 body,
 .qd-content {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  font-family: var(--qd-heading-custom-font, 'Outfit'), system-ui, sans-serif !important;
+}
+
+/* Plain layout: empty side margins reserve 30vw each before JS runs, shifting main right */
+body.quarkdown.quarkdown-plain {
+  justify-content: center !important;
+}
+
+body.quarkdown.quarkdown-plain > aside.margin-area:empty {
+  flex: 0 0 0 !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+body.quarkdown.quarkdown-plain > main {
+  flex: 0 1 var(--qd-content-width, 45rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 h1 {
@@ -178,6 +199,8 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
 }
 
 .blog-item-link-wrapper {
+  display: block !important;
+  width: 100% !important;
   text-decoration: none !important;
   color: inherit !important;
 }
@@ -211,10 +234,11 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
 }
 
 @media (min-width: 800px) {
-  .blog-item {
-    margin-left: -2rem !important;
-    padding: 2rem !important;
-    width: calc(100% + 4rem) !important;
+  .blog-item,
+  .blog-item-link-wrapper {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 </style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Hai)</p><p>•</p><p><a href="/">首页</a></p></div></div><span class="blog-date">2026年5月17日</span><h1 class="page-break" id="你好世界">你好，世界</h1><p>这是本博客的第一篇文章。整站与这篇文章一样，由 <a href="https://quarkdown.com">Quarkdown</a> 从 <span class="codespan-content"><code>.qd</code></span> 源文件构建，并通过 GitHub Actions 发布到 <span class="codespan-content"><code>dist</code></span> 分支。</p><p>源码：<a href="https://github.com/haitaodesign/haitaodesign.github.io">haitaodesign/haitaodesign.github.io</a>。</p><p>之后想到什么就写什么——技术笔记、商业实验复盘，或随便聊聊。</p></main>
