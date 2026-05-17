@@ -9,4 +9,4 @@
    - contacts.qd
    - blog.qd
 
-.html {.read {js/blog-posts-lister.js}}
+.html {<script>.read {js/blog-posts-lister.js}</script>}
