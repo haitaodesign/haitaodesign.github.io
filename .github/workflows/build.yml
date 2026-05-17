@@ -24,8 +24,9 @@ jobs:
         run: |
           test -f quarkdown-output/site/index.html
           ! grep -q 'class="box error"' quarkdown-output/site/index.html
+          ! grep -qi 'cannot call function' build.log
           grep -q '<script>document.addEventListener' quarkdown-output/site/index.html
-          ! grep -q '</motion.div>document.addEventListener' quarkdown-output/site/index.html
+          ! grep -q '</div>document.addEventListener' quarkdown-output/site/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
