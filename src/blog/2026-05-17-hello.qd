@@ -1,9 +1,9 @@
-.docname {你好，世界}
+.docname {Hello, world}
 .include {template/setup.qd}
-.blogpost date:{2026年5月17日}
+.blogpost date:{May 17, 2026}
 
-这是本博客的第一篇文章。整站与这篇文章一样，由 [Quarkdown](https://quarkdown.com) 从 `.qd` 源文件构建，并通过 GitHub Actions 发布到 `dist` 分支。
+First post on this blog. The site and this page are built from `.qd` sources with [Quarkdown](https://quarkdown.com) and published to the `dist` branch via GitHub Actions.
 
-源码：[haitaodesign/haitaodesign.github.io](https://github.com/haitaodesign/haitaodesign.github.io)。
+Source: [haitaodesign/haitaodesign.github.io](https://github.com/haitaodesign/haitaodesign.github.io).
 
-之后想到什么就写什么——技术笔记、商业实验复盘，或随便聊聊。
+More posts when I have something worth sharing.

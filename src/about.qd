@@ -1,9 +1,7 @@
 ## About
 
-**Brett (Old Sea)** — 技术降维探索者 · 商业实验记录员
+**Brett (Old Sea)** — Full-stack developer
 
-我是 **技术降维探索者**，也是 **商业实验记录员**。
-
-这个站点用 [Quarkdown](https://github.com/iamgio/quarkdown) 写成——把想法变成可发布的页面，而不必维护一整套前端工程。
+This site is built with [Quarkdown](https://github.com/iamgio/quarkdown). I write in `.qd` files and publish static pages—no heavy frontend setup.
 
 Site: [https://haitaodesign.github.io](https://haitaodesign.github.io) · Source: [GitHub](https://github.com/haitaodesign/haitaodesign.github.io)

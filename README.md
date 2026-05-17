@@ -1,29 +1,29 @@
 # haitaodesign.github.io
 
-Brett 的个人站点，由 [Quarkdown](https://github.com/iamgio/quarkdown) 编写，GitHub Actions 构建并发布。
+Brett's personal site. Built with [Quarkdown](https://github.com/iamgio/quarkdown), deployed by GitHub Actions.
 
-## 结构
+## Layout
 
-- `src/main.qd` — 站点入口
-- `src/blog/` — 博客文章（`YYYY-MM-DD-slug.qd`）
-- `archive/index.html` — 迁移前的静态门户（仅作参考）
+- `src/main.qd` — site entry
+- `src/blog/` — blog posts (`YYYY-MM-DD-slug.qd`)
+- `archive/index.html` — old static portal (reference only)
 
-## 本地构建
+## Build locally
 
 ```bash
-# 安装 Quarkdown CLI（见 https://github.com/iamgio/quarkdown）
+# Install Quarkdown CLI: https://github.com/iamgio/quarkdown
 quarkdown c src/main.qd --out-name site --clean
-# 预览 quarkdown-output/site/index.html
+# Open quarkdown-output/site/index.html
 ```
 
-## 部署
+## Deploy
 
-1. 推送至 **`main`** 分支触发 [Build workflow](.github/workflows/build.yml)
-2. 产物发布到 **`dist`** 分支
-3. 在仓库 **Settings → Pages** 中设置：**Source = Deploy from branch**，**Branch = `dist`**，**Folder = `/ (root)`**
+1. Push to **`main`** to run [Build workflow](.github/workflows/build.yml)
+2. Output goes to the **`dist`** branch
+3. **Settings → Pages**: Deploy from branch **`dist`**, folder **`/ (root)`**
 
-## 写新文章
+## New blog post
 
-1. 在 `src/blog/` 新建 `YYYY-MM-DD-标题.qd`
-2. 复制现有文章头部（`.docname`、`.include {template/setup.qd}`、`.blogpost date:{...}`）
-3. 推送到 `main`，等待 CI 完成
+1. Add `src/blog/YYYY-MM-DD-slug.qd`
+2. Copy the header from an existing post (`.docname`, `.include {template/setup.qd}`, `.blogpost date:{...}`)
+3. Push to `main` and wait for CI
