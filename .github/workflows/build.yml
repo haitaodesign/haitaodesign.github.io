@@ -24,6 +24,7 @@ jobs:
         run: |
           test -f quarkdown-output/site/index.html
           ! grep -q 'class="box error"' quarkdown-output/site/index.html
+          ! grep -q '<h4>Error:' quarkdown-output/site/index.html
           ! grep -qi 'cannot call function' build.log
           grep -q '<script>document.addEventListener' quarkdown-output/site/index.html
           ! grep -q '</div>document.addEventListener' quarkdown-output/site/index.html

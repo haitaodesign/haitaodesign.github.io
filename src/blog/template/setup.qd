@@ -2,16 +2,16 @@
 .docdescription {Brett's blog post}
 
 .function {blogpost}
- date?:
- .container classname:{blog-navigation} fullwidth:{yes}
- .row gap:{12px} 
- Brett (Old Hai)
- 
- •
+    date?:
+    .container classname:{blog-navigation} fullwidth:{yes}
+        .row gap:{12px} 
+            Brett (Old Hai)
+            
+            •
 
- [Home](/)
+            [Home](/)
 
- .if {.date::isnone::not}
- .date::text classname:{blog-date}
- 
- # .docname
+    .if {.date::isnone::not}
+        .date::text classname:{blog-date}
+        
+    # .docname
