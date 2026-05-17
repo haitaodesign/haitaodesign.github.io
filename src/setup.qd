@@ -5,25 +5,25 @@
 .htmloptions baseurl:{https://haitaodesign.github.io}
 
 .dockeywords
- - Brett
- - haitaodesign
- - quarkdown
- - 博客
+   - Brett
+   - haitaodesign
+   - quarkdown
+   - 博客
 
 .docauthors
- - Brett (Old Hai)
- - website: https://haitaodesign.github.io
+   - Brett (Old Hai)
+     - website: https://haitaodesign.github.io
 
-.font heading:{GoogleFonts:Outfit}
+.font heading:{GoogleFonts:Outfit} 
 
 .paragraphstyle lineheight:{1.7}
 
 .cssproperties
- - background-color: #fafafa
- - main-color: #18181b
- - heading-color: #09090b
- - heading-font-size: 1.2em
- - link-color: #6366f1
+   - background-color: #fafafa
+   - main-color: #18181b
+   - heading-color: #09090b
+   - heading-font-size: 1.2em
+   - link-color: #6366f1
 
 .read {stylesheets/style.css}::css
 

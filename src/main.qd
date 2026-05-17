@@ -4,9 +4,9 @@
 # .docauthor
 
 .includeall
- - about.qd
- - projects.qd
- - contacts.qd
- - blog.qd
+   - about.qd
+   - projects.qd
+   - contacts.qd
+   - blog.qd
 
 .html {.read {js/blog-posts-lister.js}}
