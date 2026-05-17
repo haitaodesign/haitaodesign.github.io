@@ -24,8 +24,8 @@ jobs:
         run: |
           test -f quarkdown-output/site/index.html
           ! grep -q 'class="box error"' quarkdown-output/site/index.html
-          ! grep -q 'document.addEventListener("DOMContentLoaded"' quarkdown-output/site/index.html | grep -qv '<script>'
-          ! grep -qP '</div>document\\.addEventListener' quarkdown-output/site/index.html
+          grep -q '<script>document.addEventListener' quarkdown-output/site/index.html
+          ! grep -q '</motion.div>document.addEventListener' quarkdown-output/site/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
