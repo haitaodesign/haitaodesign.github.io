@@ -1,9 +1,30 @@
 /* Light base + dark/zinc & purple accents */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+/* Use Outfit from setup.qd (.font); avoid @import here — Quarkdown breaks the URL when inlining. */
 
 body,
 .qd-content {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+  font-family: var(--qd-heading-custom-font, 'Outfit'), system-ui, sans-serif !important;
+}
+
+/* Plain layout: empty side margins reserve 30vw each before JS runs, shifting main right */
+body.quarkdown.quarkdown-plain {
+  justify-content: center !important;
+}
+
+body.quarkdown.quarkdown-plain > aside.margin-area:empty {
+  flex: 0 0 0 !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+body.quarkdown.quarkdown-plain > main {
+  flex: 0 1 var(--qd-content-width, 45rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 h1 {
@@ -148,6 +169,8 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
 }
 
 .blog-item-link-wrapper {
+  display: block !important;
+  width: 100% !important;
   text-decoration: none !important;
   color: inherit !important;
 }
@@ -181,9 +204,10 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
 }
 
 @media (min-width: 800px) {
-  .blog-item {
-    margin-left: -2rem;
-    padding: 2rem;
-    width: calc(100% + 4rem);
+  .blog-item,
+  .blog-item-link-wrapper {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
