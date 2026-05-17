@@ -4,7 +4,7 @@
  .foreach {.listfiles {blog} directories:{no} sortby:{name} order:{descending}} 
  path:
  .container classname:{blog-item}
- .container classname:{blog-item-content}
+ .container classname:{blog-item-content} 
  .path::subdocument label:{.path::filename extension:{no}}
 
  .include {.path} sandbox:{subdocument}

@@ -4,14 +4,14 @@
 .function {blogpost}
  date?:
  .container classname:{blog-navigation} fullwidth:{yes}
- .row gap:{12px}
+ .row gap:{12px} 
  Brett (Old Hai)
-
+ 
  •
 
  [首页](/)
 
  .if {.date::isnone::not}
  .date::text classname:{blog-date}
-
+ 
  # .docname
