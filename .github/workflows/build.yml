@@ -15,7 +15,7 @@ jobs:
 
       - uses: quarkdown-labs/setup-quarkdown@v1
         with:
-          quarkdown-version: 'v1.13.0'
+          quarkdown-version: '1.13.0'
 
       - name: Build
         run: quarkdown c src/main.qd --out-name site --clean
