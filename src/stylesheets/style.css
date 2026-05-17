@@ -1,4 +1,10 @@
 /* Light base + dark/zinc & purple accents */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body,
+.qd-content {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
 
 h1 {
   font-size: 3rem !important;

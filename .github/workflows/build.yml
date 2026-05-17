@@ -18,10 +18,12 @@ jobs:
           quarkdown-version: 'devbuild'
 
       - name: Build
-        run: quarkdown c src/main.qd --out-name site --clean
+        run: quarkdown c src/main.qd --out-name site --clean 2>&1 | tee build.log
 
       - name: Verify build output
-        run: test -f quarkdown-output/site/index.html
+        run: |
+          test -f quarkdown-output/site/index.html
+          ! grep -q "#### Error:" quarkdown-output/site/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

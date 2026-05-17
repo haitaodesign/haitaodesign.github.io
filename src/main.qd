@@ -1,6 +1,8 @@
 .docname {Brett / haitaodesign}
 .include {setup.qd}
 
+# .docauthor
+
 .includeall
  - about.qd
  - projects.qd
