@@ -1,6 +1,7 @@
 # Quarkdown
 **/output/
 quarkdown-output/
+output/
 
 # IDE
 .idea/

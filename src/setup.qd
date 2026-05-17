@@ -14,7 +14,7 @@
  - Brett (Old Hai)
  - website: https://haitaodesign.github.io
 
-.font heading:{GoogleFonts:Plus Jakarta Sans} body:{GoogleFonts:Plus Jakarta Sans}
+.font heading:{GoogleFonts:Plus Jakarta Sans}
 
 .paragraphstyle lineheight:{1.7}
 
@@ -27,4 +27,5 @@
 
 .read {stylesheets/style.css}::css
 
+ 
 .html

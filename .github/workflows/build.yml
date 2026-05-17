@@ -15,10 +15,13 @@ jobs:
 
       - uses: quarkdown-labs/setup-quarkdown@v1
         with:
-          quarkdown-version: '1.13.0'
+          quarkdown-version: 'devbuild'
 
       - name: Build
         run: quarkdown c src/main.qd --out-name site --clean
+
+      - name: Verify build output
+        run: test -f quarkdown-output/site/index.html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
