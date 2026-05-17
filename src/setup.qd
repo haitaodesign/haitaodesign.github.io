@@ -19,10 +19,10 @@
 .paragraphstyle lineheight:{1.7}
 
 .cssproperties
-   - background-color: #fafafa
+   - background-color: #ffffff
    - main-color: #18181b
    - heading-color: #09090b
-   - heading-font-size: 1.2em
-   - link-color: #6366f1
+   - heading-font-size: 1.125em
+   - link-color: #18181b
 
 .read {stylesheets/style.css}::css

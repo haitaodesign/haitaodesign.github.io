@@ -1,12 +1,11 @@
-/* Light base + dark/zinc & purple accents */
-/* Use Outfit from setup.qd (.font); avoid @import here — Quarkdown breaks the URL when inlining. */
+/* shadcn/ui-inspired zinc theme — neutral, minimal */
+/* Tokens: https://ui.shadcn.com/themes (zinc, light) */
 
 body,
 .qd-content {
-  font-family: var(--qd-heading-custom-font, 'Outfit'), system-ui, sans-serif !important;
+  font-family: var(--qd-heading-custom-font, 'Outfit'), ui-sans-serif, system-ui, sans-serif !important;
 }
 
-/* Plain layout: empty side margins reserve 30vw each before JS runs, shifting main right */
 body.quarkdown.quarkdown-plain {
   justify-content: center !important;
 }
@@ -28,103 +27,113 @@ body.quarkdown.quarkdown-plain > main {
 }
 
 h1 {
-  font-size: 3rem !important;
-  letter-spacing: -0.03em;
+  font-size: 2.25rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.2 !important;
 }
 
 h2 {
-  font-size: 2.25rem !important;
-  letter-spacing: -0.02em;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.3 !important;
+  margin-top: 2.5rem !important;
 }
 
 h3 {
-  font-size: 1.75rem !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.015em !important;
 }
 
 a {
   text-decoration: none !important;
+  color: #18181b !important;
 }
 
 a:not(.sidebar a) {
-  transition: color 0.25s ease, opacity 0.25s ease;
+  transition: color 0.15s ease;
 }
 
 a:not(.sidebar a):hover {
-  color: #a855f7 !important;
-  opacity: 1;
+  color: #09090b !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
 }
 
-a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
-  font-family: 'bootstrap-icons', monospace;
-  font-weight: bold;
-  margin-inline-start: 4px;
-  content: "\F470";
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
+a:not(.sidebar a, .blog-item-link-wrapper)::after {
+  content: none !important;
 }
 
-/* Avatar (about section) */
+/* Avatar */
 .avatar-badge {
   width: 4rem;
   height: 4rem;
-  border-radius: 50%;
+  border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  font-size: 1.35rem;
+  font-weight: 600;
+  font-size: 1.25rem;
   color: #18181b;
-  background: linear-gradient(135deg, #6366f1, #a855f7);
-  box-shadow: 0 0 0 3px #fafafa, 0 4px 20px rgba(99, 102, 241, 0.25);
+  background: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* Project link cards */
+/* Cards (project) */
 .project-cards {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 0.75rem;
   margin-top: 1rem;
 }
 
 .project-card {
   display: block;
-  padding: 1.15rem 1.25rem;
+  padding: 1rem 1.25rem;
   background: #ffffff;
   border: 1px solid #e4e4e7;
-  border-radius: 12px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .project-card:hover {
-  border-color: color-mix(in srgb, #6366f1 40%, #e4e4e7);
-  box-shadow: 0 12px 32px -12px rgba(99, 102, 241, 0.2);
-  transform: translateY(-2px);
+  background: #fafafa;
+  border-color: #e4e4e7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transform: none;
 }
 
 .project-card a {
-  font-weight: 600;
+  font-weight: 500;
   color: #09090b !important;
 }
 
+.project-card a:hover {
+  text-decoration: underline !important;
+}
+
 .project-card .badge {
-  font-size: 0.65rem;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-family: ui-monospace, monospace;
   font-weight: 500;
-  padding: 0.1rem 0.45rem;
+  padding: 0.125rem 0.5rem;
   margin-left: 0.35rem;
-  border-radius: 99px;
-  border: 1px solid rgba(168, 85, 247, 0.35);
-  background-color: rgba(168, 85, 247, 0.1);
-  color: #7e22ce;
+  border-radius: 6px;
+  border: 1px solid #e4e4e7;
+  background-color: #f4f4f5;
+  color: #52525b;
   vertical-align: middle;
 }
 
 .project-card p,
 .project-card > :not(a):not(.badge) {
   margin-top: 0.35rem;
-  font-size: 0.92rem;
-  color: #52525b;
+  font-size: 0.875rem;
+  color: #71717a;
   line-height: 1.5;
 }
 
@@ -132,24 +141,24 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
 .blog-container {
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
 }
 
 .blog-item {
   display: block !important;
-  margin-top: 2rem;
-  padding: 2rem;
-  border-radius: 12px;
+  margin-top: 0 !important;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
   background: #ffffff;
-  --shadow-color: color-mix(in srgb, #27272a 12%, transparent);
   border: 1px solid #e4e4e7;
-  box-shadow: 0 16px 40px var(--shadow-color);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .blog-item:hover {
-  --shadow-color: color-mix(in srgb, #6366f1 18%, transparent);
-  border-color: color-mix(in srgb, #a855f7 35%, #e4e4e7);
-  box-shadow: 0 20px 48px var(--shadow-color);
+  background: #fafafa;
+  border-color: #e4e4e7;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
 }
 
 .blog-item .blog-navigation {
@@ -175,19 +184,22 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
   color: inherit !important;
 }
 
+.blog-item-link-wrapper:hover {
+  text-decoration: none !important;
+}
+
 .blog-item-link-wrapper::after {
   content: none !important;
 }
 
 .blog-navigation {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 .blog-date {
-  font-size: 0.9em;
-  opacity: 0.65;
-  margin-bottom: 1em;
-  color: #52525b;
+  font-size: 0.875rem;
+  margin-bottom: 0.75em;
+  color: #71717a;
 }
 
 .blog-date + h1,
@@ -196,11 +208,11 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
 }
 
 .blog-navigation ~ h1 {
-  font-size: 2.25rem !important;
+  font-size: 1.875rem !important;
 }
 
 .blog-navigation ~ h2 {
-  font-size: 1.85rem !important;
+  font-size: 1.5rem !important;
 }
 
 @media (min-width: 800px) {
@@ -212,16 +224,16 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
   }
 }
 
-/* Page footer — last block on the page */
+/* Footer */
 .site-footer {
   margin-top: 4rem !important;
   padding-top: 2rem !important;
   padding-bottom: 1rem !important;
   border-top: 1px solid #e4e4e7 !important;
   text-align: center !important;
-  font-size: 0.85rem !important;
+  font-size: 0.875rem !important;
   color: #71717a !important;
-  font-family: ui-monospace, 'JetBrains Mono', monospace !important;
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
 }
 
 .site-footer p {
@@ -229,7 +241,12 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
 }
 
 .site-footer a {
-  color: #6366f1 !important;
+  color: #18181b !important;
+  font-weight: 500;
+}
+
+.site-footer a:hover {
+  color: #09090b !important;
 }
 
 .site-footer a::after {
