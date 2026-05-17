@@ -1,6 +1,6 @@
-.docdescription {Brett 的个人站点：技术探索、商业实验与写作。}
+.docdescription {Brett's personal site: tech exploration, business experiments, and writing.}
 .doctype {plain}
-.doclang {Chinese}
+.doclang {English}
 .theme {paperwhite} layout:{latex}
 .htmloptions baseurl:{https://haitaodesign.github.io}
 
@@ -8,7 +8,7 @@
    - Brett
    - haitaodesign
    - quarkdown
-   - 博客
+   - blog
 
 .docauthors
    - Brett (Old Hai)

@@ -8,5 +8,6 @@
    - projects.qd
    - contacts.qd
    - blog.qd
+   - footer.qd
 
 .html {<script>.read {js/blog-posts-lister.js}</script>}

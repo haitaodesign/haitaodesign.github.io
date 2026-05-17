@@ -211,3 +211,27 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
     max-width: 100% !important;
   }
 }
+
+/* Page footer — last block on the page */
+.site-footer {
+  margin-top: 4rem !important;
+  padding-top: 2rem !important;
+  padding-bottom: 1rem !important;
+  border-top: 1px solid #e4e4e7 !important;
+  text-align: center !important;
+  font-size: 0.85rem !important;
+  color: #71717a !important;
+  font-family: ui-monospace, 'JetBrains Mono', monospace !important;
+}
+
+.site-footer p {
+  margin: 0 !important;
+}
+
+.site-footer a {
+  color: #6366f1 !important;
+}
+
+.site-footer a::after {
+  content: none !important;
+}
