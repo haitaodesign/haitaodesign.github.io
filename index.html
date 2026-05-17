@@ -13,19 +13,25 @@
     <script>window.texMacros = {}</script>
     <link href="./lib/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
     <link href="./theme/theme.css" rel="stylesheet">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+    <style>@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
 body {
-    --qd-heading-custom-font: 'Plus Jakarta Sans';}
+    --qd-heading-custom-font: 'Outfit';}
 body {
     --qd-line-height: 1.7000000476837158;}
 </style>
     <script>prepare(new PlainDocument());</script>
-<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol></ol></nav>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="_" data-depth="1"><a href="#_"></a></li></ol></nav>
 </template>  </head>
   <body class="quarkdown quarkdown-plain">
     <aside class="margin-area" id="margin-area-left"></aside>
     <main><ol></ol><ul><li>Brett</li><li>haitaodesign</li><li>quarkdown</li><li>博客</li></ul><table><thead><tr><th>Key</th><th>Value</th></tr></thead><tbody></tbody></table><ul><li>Brett (Old Hai)</li><li>website: <a href="https://haitaodesign.github.io">https://haitaodesign.github.io</a></li></ul><div class="box error"><header><h4>Error: cssproperties</h4></header><div class="box-content"><p>Cannot call function cssproperties<span class="inline-collapse" data-full-text="(Context context, Map properties)" data-collapsed-text="(...)" data-collapsed="false">(Context context, Map properties)</span> with arguments <span class="inline-collapse" data-full-text="()" data-collapsed-text="(...)" data-collapsed="false">()</span>: <br /><em>expected 2 arguments, but 0 found</em></p><pre><code class="no-highlight nohljsln">.cssproperties</code></pre></div></div><ul><li>background-color: #fafafa</li><li>main-color: #18181b</li><li>heading-color: #09090b</li><li>heading-font-size: 1.2em</li><li>link-color: #6366f1</li></ul><style data-hidden="">/* Light base + dark/zinc & purple accents */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400 !important;500;600;700;800&display=swap');
+
+body,
+.qd-content {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
 
 h1 {
   font-size: 3rem !important;
@@ -208,7 +214,7 @@ a:not(.sidebar a, .blog-item-link-wrapper, .project-card a)::after {
     width: calc(100% + 4rem) !important;
   }
 }
-</style><div class="box error"><header><h4>Error: html</h4></header><div class="box-content"><p>Cannot call function html<span class="inline-collapse" data-full-text="(Context context, String content)" data-collapsed-text="(...)" data-collapsed="false">(Context context, String content)</span> with arguments <span class="inline-collapse" data-full-text="()" data-collapsed-text="(...)" data-collapsed="false">()</span>: <br /><em>expected 2 arguments, but 0 found</em></p><pre><code class="no-highlight nohljsln">.html</code></pre></div></div><div class="box error"><header><h4>Error: includeall</h4></header><div class="box-content"><p>Cannot call function includeall<span class="inline-collapse" data-full-text="(MutableContext context, Iterable paths)" data-collapsed-text="(...)" data-collapsed="false">(MutableContext context, Iterable paths)</span> with arguments <span class="inline-collapse" data-full-text="()" data-collapsed-text="(...)" data-collapsed="false">()</span>: <br /><em>expected 2 arguments, but 0 found</em></p><pre><code class="no-highlight nohljsln">.includeall</code></pre></div></div><ul><li>about.qd</li><li>projects.qd</li><li>contacts.qd</li><li>blog.qd</li></ul>document.addEventListener("DOMContentLoaded", function () {
+</style><div class="box error"><header><h4>Error: html</h4></header><div class="box-content"><p>Cannot call function html<span class="inline-collapse" data-full-text="(Context context, String content)" data-collapsed-text="(...)" data-collapsed="false">(Context context, String content)</span> with arguments <span class="inline-collapse" data-full-text="()" data-collapsed-text="(...)" data-collapsed="false">()</span>: <br /><em>expected 2 arguments, but 0 found</em></p><pre><code class="no-highlight nohljsln">.html</code></pre></div></div><h1 class="page-break" id="_"></h1><div class="box error"><header><h4>Error: includeall</h4></header><div class="box-content"><p>Cannot call function includeall<span class="inline-collapse" data-full-text="(MutableContext context, Iterable paths)" data-collapsed-text="(...)" data-collapsed="false">(MutableContext context, Iterable paths)</span> with arguments <span class="inline-collapse" data-full-text="()" data-collapsed-text="(...)" data-collapsed="false">()</span>: <br /><em>expected 2 arguments, but 0 found</em></p><pre><code class="no-highlight nohljsln">.includeall</code></pre></div></div><ul><li>about.qd</li><li>projects.qd</li><li>contacts.qd</li><li>blog.qd</li></ul>document.addEventListener("DOMContentLoaded", function () {
   const blogItems = document.querySelectorAll('.blog-item');
   Array.from(blogItems).forEach(blogItem => {
     const linkElement = getBlogItemLinkElement(blogItem);
