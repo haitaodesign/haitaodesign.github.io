@@ -1,0 +1,10 @@
+## 博客
+
+.container classname:{blog-container} fullwidth:{yes}
+ .foreach {.listfiles {blog} directories:{no} sortby:{name} order:{descending}} 
+ path:
+ .container classname:{blog-item}
+ .container classname:{blog-item-content}
+ .path::subdocument label:{.path::filename extension:{no}}
+
+ .include {.path} sandbox:{subdocument}

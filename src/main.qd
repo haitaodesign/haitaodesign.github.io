@@ -1,0 +1,10 @@
+.docname {Brett / haitaodesign}
+.include {setup.qd}
+
+.includeall
+ - about.qd
+ - projects.qd
+ - contacts.qd
+ - blog.qd
+
+.html {.read {js/blog-posts-lister.js}}

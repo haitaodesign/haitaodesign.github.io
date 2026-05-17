@@ -1,0 +1,30 @@
+.docdescription {Brett 的个人站点：技术探索、商业实验与写作。}
+.doctype {plain}
+.doclang {Chinese}
+.theme {paperwhite} layout:{latex}
+.htmloptions baseurl:{https://haitaodesign.github.io}
+
+.dockeywords
+ - Brett
+ - haitaodesign
+ - quarkdown
+ - 博客
+
+.docauthors
+ - Brett (Old Hai)
+ - website: https://haitaodesign.github.io
+
+.font heading:{GoogleFonts:Plus Jakarta Sans} body:{GoogleFonts:Plus Jakarta Sans}
+
+.paragraphstyle lineheight:{1.7}
+
+.cssproperties
+ - background-color: #fafafa
+ - main-color: #18181b
+ - heading-color: #09090b
+ - heading-font-size: 1.2em
+ - link-color: #6366f1
+
+.read {stylesheets/style.css}::css
+
+.html

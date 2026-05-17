@@ -1,0 +1,20 @@
+# Quarkdown
+**/output/
+quarkdown-output/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Misc
+.claude/
