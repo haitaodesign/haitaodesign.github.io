@@ -35,4 +35,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: dist
           publish_dir: ./quarkdown-output/site
-          cname: oldsea.me
+          cname: www.oldsea.me
