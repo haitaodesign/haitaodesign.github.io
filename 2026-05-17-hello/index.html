@@ -96,31 +96,20 @@ a:not(.sidebar a, .blog-item-link-wrapper)::after {
   content: none !important;
 }
 
-/* Avatar — linked images render as p > a > img; clip on container cuts the bottom */
-.row .clip.clip-circle > .container:not(:has(> figure)) {
-  clip-path: none !important;
-  display: inline-flex !important;
-  line-height: 0 !important;
-}
-
-.row .clip.clip-circle > .container:not(:has(> figure)) p {
+/* Avatar — .row renders as .stack-row; clip-circle expects figure > img (not p > a > img) */
+.quarkdown .stack-row .clip.clip-circle > .container > figure {
   margin: 0 !important;
   line-height: 0 !important;
 }
 
-.row .clip.clip-circle > .container:not(:has(> figure)) img {
+.quarkdown .stack-row .clip.clip-circle img {
   display: block !important;
-  border-radius: 50% !important;
+  width: 64px !important;
+  height: 64px !important;
   object-fit: cover !important;
-  aspect-ratio: 1 !important;
 }
 
-.row .clip a {
-  display: block !important;
-  line-height: 0 !important;
-}
-
-.row .clip a:hover {
+.quarkdown .stack-row .clip a:hover {
   text-decoration: none !important;
 }
 

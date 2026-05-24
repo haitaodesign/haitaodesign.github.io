@@ -95,31 +95,20 @@ a:not(.sidebar a, .blog-item-link-wrapper)::after {
   content: none !important;
 }
 
-/* Avatar — linked images render as p > a > img; clip on container cuts the bottom */
-.row .clip.clip-circle > .container:not(:has(> figure)) {
-  clip-path: none !important;
-  display: inline-flex !important;
-  line-height: 0 !important;
-}
-
-.row .clip.clip-circle > .container:not(:has(> figure)) p {
+/* Avatar — .row renders as .stack-row; clip-circle expects figure > img (not p > a > img) */
+.quarkdown .stack-row .clip.clip-circle > .container > figure {
   margin: 0 !important;
   line-height: 0 !important;
 }
 
-.row .clip.clip-circle > .container:not(:has(> figure)) img {
+.quarkdown .stack-row .clip.clip-circle img {
   display: block !important;
-  border-radius: 50% !important;
+  width: 64px !important;
+  height: 64px !important;
   object-fit: cover !important;
-  aspect-ratio: 1 !important;
 }
 
-.row .clip a {
-  display: block !important;
-  line-height: 0 !important;
-}
-
-.row .clip a:hover {
+.quarkdown .stack-row .clip a:hover {
   text-decoration: none !important;
 }
 
@@ -308,7 +297,7 @@ a:not(.sidebar a, .blog-item-link-wrapper)::after {
 .site-footer a::after {
   content: none !important;
 }
-</style><h1 class="page-break" id="brett-old-sea">Brett (Old Sea)</h1><h2 id="about">About</h2><p><strong>Brett (Old Sea)</strong> — Full-stack developer</p><div style="justify-content: flex-start; align-items: center;" class="stack stack-row"><div class="clip clip-circle"><div class="container"><p><a href="https://github.com/haitaodesign"><img src="https://avatars.githubusercontent.com/u/14287992?v=4" alt="" style="width: 64.0px;" /></a></p></div></div><p>&larr; that&rsquo;s me</p></div><p>This site is built with <a href="https://github.com/iamgio/quarkdown">Quarkdown</a>. I write in <span class="codespan-content"><code>.qd</code></span> files and publish static pages—no heavy frontend setup.</p><p>Site: <a href="https://haitaodesign.github.io">https://haitaodesign.github.io</a> · Source: <a href="https://github.com/haitaodesign/haitaodesign.github.io">GitHub</a></p><h2 id="projects">Projects</h2><div class="container fullwidth project-cards"><div class="container project-card"><p><a href="https://youmind.com/b/XeKinBIcaRXta3">Toward a Free &amp; Secure Web</a> <span class="codespan-content"><code>Open source</code></span></p><p>Join Brett on the journey to a freer, safer internet — an open-source book built with YouMind.</p></div></div><h2 id="contact">Contact</h2><div style="grid-template-columns: auto auto; justify-content: flex-start; align-items: center; row-gap: 1.0cm; column-gap: 1.0cm;" class="stack stack-grid"><p><a href="https://github.com/haitaodesign">GitHub</a><br /><span class="codespan-content"><code>haitaodesign</code></span></p><p><a href="https://github.com/haitaodesign/haitaodesign.github.io">Repository</a><br /><span class="codespan-content"><code>haitaodesign.github.io</code></span></p><p><a href="mailto:lihaitaodesign@gmail.com">Email</a><br /><span class="codespan-content"><code>lihaitaodesign@gmail.com</code></span></p></div><h2 id="blog">Blog</h2><div class="container fullwidth blog-container"><div class="container blog-item"><div class="container blog-item-content"><a href="./2026-05-17-hello">2026-05-17-hello</a><p></p><style data-hidden="">:root { --qd-background-color: #ffffff !important; --qd-main-color: #18181b !important; --qd-heading-color: #09090b !important; --qd-heading-font-size: 1.125em !important; --qd-link-color: #18181b !important; }</style><style data-hidden="">/* shadcn/ui-inspired zinc theme — neutral, minimal */
+</style><h1 class="page-break" id="brett-old-sea">Brett (Old Sea)</h1><h2 id="about">About</h2><p><strong>Brett (Old Sea)</strong> — Full-stack developer</p><div style="justify-content: flex-start; align-items: center;" class="stack stack-row"><div class="clip clip-circle"><div class="container"><figure><img src="https://avatars.githubusercontent.com/u/14287992?v=4" alt="" style="width: 64.0px;" /></figure></div></div><p>&larr; <a href="https://github.com/haitaodesign">that&rsquo;s me</a></p></div><p>This site is built with <a href="https://github.com/iamgio/quarkdown">Quarkdown</a>. I write in <span class="codespan-content"><code>.qd</code></span> files and publish static pages—no heavy frontend setup.</p><p>Site: <a href="https://haitaodesign.github.io">https://haitaodesign.github.io</a> · Source: <a href="https://github.com/haitaodesign/haitaodesign.github.io">GitHub</a></p><h2 id="projects">Projects</h2><div class="container fullwidth project-cards"><div class="container project-card"><p><a href="https://youmind.com/b/XeKinBIcaRXta3">Toward a Free &amp; Secure Web</a> <span class="codespan-content"><code>Open source</code></span></p><p>Join Brett on the journey to a freer, safer internet — an open-source book built with YouMind.</p></div></div><h2 id="contact">Contact</h2><div style="grid-template-columns: auto auto; justify-content: flex-start; align-items: center; row-gap: 1.0cm; column-gap: 1.0cm;" class="stack stack-grid"><p><a href="https://github.com/haitaodesign">GitHub</a><br /><span class="codespan-content"><code>haitaodesign</code></span></p><p><a href="https://github.com/haitaodesign/haitaodesign.github.io">Repository</a><br /><span class="codespan-content"><code>haitaodesign.github.io</code></span></p><p><a href="mailto:lihaitaodesign@gmail.com">Email</a><br /><span class="codespan-content"><code>lihaitaodesign@gmail.com</code></span></p></div><h2 id="blog">Blog</h2><div class="container fullwidth blog-container"><div class="container blog-item"><div class="container blog-item-content"><a href="./2026-05-17-hello">2026-05-17-hello</a><p></p><style data-hidden="">:root { --qd-background-color: #ffffff !important; --qd-main-color: #18181b !important; --qd-heading-color: #09090b !important; --qd-heading-font-size: 1.125em !important; --qd-link-color: #18181b !important; }</style><style data-hidden="">/* shadcn/ui-inspired zinc theme — neutral, minimal */
 /* Tokens: https://ui.shadcn.com/themes (zinc, light) */
 
 body,
@@ -376,31 +365,20 @@ a:not(.sidebar a, .blog-item-link-wrapper)::after {
   content: none !important;
 }
 
-/* Avatar — linked images render as p > a > img; clip on container cuts the bottom */
-.row .clip.clip-circle > .container:not(:has(> figure)) {
-  clip-path: none !important;
-  display: inline-flex !important;
-  line-height: 0 !important;
-}
-
-.row .clip.clip-circle > .container:not(:has(> figure)) p {
+/* Avatar — .row renders as .stack-row; clip-circle expects figure > img (not p > a > img) */
+.quarkdown .stack-row .clip.clip-circle > .container > figure {
   margin: 0 !important;
   line-height: 0 !important;
 }
 
-.row .clip.clip-circle > .container:not(:has(> figure)) img {
+.quarkdown .stack-row .clip.clip-circle img {
   display: block !important;
-  border-radius: 50% !important;
+  width: 64px !important;
+  height: 64px !important;
   object-fit: cover !important;
-  aspect-ratio: 1 !important;
 }
 
-.row .clip a {
-  display: block !important;
-  line-height: 0 !important;
-}
-
-.row .clip a:hover {
+.quarkdown .stack-row .clip a:hover {
   text-decoration: none !important;
 }
 
