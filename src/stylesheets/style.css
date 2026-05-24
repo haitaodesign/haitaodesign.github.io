@@ -67,6 +67,10 @@ a:not(.sidebar a, .blog-item-link-wrapper)::after {
 }
 
 /* Avatar */
+.row .clip a:hover {
+  text-decoration: none !important;
+}
+
 .avatar-badge {
   width: 4rem;
   height: 4rem;
