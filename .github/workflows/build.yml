@@ -17,15 +17,21 @@ jobs:
         with:
           quarkdown-version: 'devbuild'
 
+      - name: Check Quarkdown block indentation
+        run: bash scripts/check-qd-indent.sh
+
       - name: Build
-        run: quarkdown c src/main.qd --out-name site --clean 2>&1 | tee build.log
+        run: |
+          set -o pipefail
+          quarkdown c src/main.qd --out-name site --clean --strict 2>&1 | tee build.log
 
       - name: Verify build output
         run: |
           test -f quarkdown-output/site/index.html
-          ! grep -q 'class="box error"' quarkdown-output/site/index.html
-          ! grep -q '<h4>Error:' quarkdown-output/site/index.html
+          ! grep -rq 'class="box error"' quarkdown-output/site/
+          ! grep -rq '<h4>Error:' quarkdown-output/site/
           ! grep -qi 'cannot call function' build.log
+          ! grep -qiE 'error:|expected [0-9]+ arguments' build.log
           grep -q '<script>document.addEventListener' quarkdown-output/site/index.html
           ! grep -q '</div>document.addEventListener' quarkdown-output/site/index.html
 
