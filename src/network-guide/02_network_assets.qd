@@ -89,4 +89,8 @@
 3. **网络冗余**：**魔戒 (Mojie)** 作为按量计费备用，国内可直接访问，是解决“第一个翻墙工具从哪下载”问题的最佳方案。
 4. **动态调整**：对于 AI 订阅，可随用随开。
 
-.pagination prevtitle:{01｜为什么要建立全球化网络观？} prevlink:{01_why_share.html} nexttitle:{03｜三步快速跑通国际互联网访问} nextlink:{03_quick_access.html}
+.var {prevtitle} {01｜为什么要建立全球化网络观？}
+.var {prevlink} {01_why_share.html}
+.var {nexttitle} {03｜三步快速跑通国际互联网访问}
+.var {nextlink} {03_quick_access.html}
+.include {pagination.qd}

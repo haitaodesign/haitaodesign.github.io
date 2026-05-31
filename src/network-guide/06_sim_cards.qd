@@ -59,4 +59,8 @@ MySim 5G（中国移动香港出品）是目前性价比最高的港号方案。
 > **相关阅读**:
 > - [📊 02｜全球化网络资产清单与成本核算](02_network_assets.html)
 
-.pagination prevtitle:{05｜国内先行准备：证件与支付工具} prevlink:{05_preparation.html}
+.var {prevtitle} {05｜国内先行准备：证件与支付工具}
+.var {prevlink} {05_preparation.html}
+.var {nexttitle} {}
+.var {nextlink} {}
+.include {pagination.qd}

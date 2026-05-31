@@ -44,4 +44,8 @@
 
 > **下一步**: 跑通访问后，我们需要申请一个真正属于自己的谷歌账号 (Gmail)。
 
-.pagination prevtitle:{02｜全球化网络资产清单与成本核算} prevlink:{02_network_assets.html} nexttitle:{04｜如何申请谷歌账号 (Google Account)} nextlink:{04_google_account.html}
+.var {prevtitle} {02｜全球化网络资产清单与成本核算}
+.var {prevlink} {02_network_assets.html}
+.var {nexttitle} {04｜如何申请谷歌账号 (Google Account)}
+.var {nextlink} {04_google_account.html}
+.include {pagination.qd}
