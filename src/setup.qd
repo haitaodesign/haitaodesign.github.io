@@ -1,6 +1,6 @@
 .docdescription {Brett's personal site — full-stack developer.}
-.doctype {plain}
 .doclang {English}
+
 .theme {paperwhite} layout:{latex}
 .htmloptions baseurl:{https://haitaodesign.github.io}
 

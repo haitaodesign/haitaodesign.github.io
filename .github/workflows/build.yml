@@ -24,17 +24,15 @@ jobs:
         run: |
           set -o pipefail
           quarkdown c src/main.qd --out-name site --clean --strict 2>&1 | tee build.log
-          mkdir -p quarkdown-output/site/network-guide
-          for f in src/network-guide/*.qd; do
-            if [[ "$(basename "$f")" != "setup.qd" && "$(basename "$f")" != "setup_detail.qd" && "$(basename "$f")" != _* ]]; then
-              name=$(basename "$f" .qd)
-              quarkdown c "$f" --pipe --allow global-read | sed \
-                -e 's|src="\./script/|src="/script/|g' \
-                -e 's|href="\./theme/|href="/theme/|g' \
-                -e 's|href="\./lib/|href="/lib/|g' \
-                > "quarkdown-output/site/network-guide/${name}.html"
-            fi
-          done
+          # Compile docs section: one command builds all 6 article subdirectories
+          quarkdown c src/network-guide/01_why_share.qd --allow global-read \
+            -o quarkdown-output/site --out-name network-guide
+          # Compile the network-guide index (plain doc) separately
+          quarkdown c src/network-guide/index.qd --pipe --allow global-read | sed \
+            -e 's|src="\./script/|src="/script/|g' \
+            -e 's|href="\./theme/|href="/theme/|g' \
+            -e 's|href="\./lib/|href="/lib/|g' \
+            > quarkdown-output/site/network-guide/index.html
 
       - name: Verify build output
         run: |
