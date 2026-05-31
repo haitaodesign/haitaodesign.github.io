@@ -31,6 +31,9 @@ jobs:
               quarkdown c "$f" --pipe --allow global-read > "quarkdown-output/site/network-guide/${name}.html"
             fi
           done
+          cp -r quarkdown-output/site/lib quarkdown-output/site/network-guide/
+          cp -r quarkdown-output/site/theme quarkdown-output/site/network-guide/
+          cp -r quarkdown-output/site/script quarkdown-output/site/network-guide/
 
       - name: Verify build output
         run: |
