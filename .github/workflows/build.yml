@@ -27,9 +27,8 @@ jobs:
           # Compile docs section: one command builds all articles
           quarkdown c src/network-guide/01_why_share.qd --allow global-read \
             -o quarkdown-output/site --out-name network-guide
-          # Compile the network-guide index as a standard doc
-          quarkdown c src/network-guide/index.qd --allow global-read \
-            -o quarkdown-output/site --out-name network-guide
+          # Generate the network-guide index as a redirect
+          echo '<meta http-equiv="refresh" content="0; url=00_foreword/" /><script>window.location.replace("00_foreword/");</script>' > quarkdown-output/site/network-guide/index.html
 
       - name: Verify build output
         run: |
