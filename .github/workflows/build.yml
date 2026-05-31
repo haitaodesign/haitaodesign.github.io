@@ -26,7 +26,7 @@ jobs:
           quarkdown c src/main.qd --out-name site --clean --strict 2>&1 | tee build.log
           mkdir -p quarkdown-output/site/network-guide
           for f in src/network-guide/*.qd; do
-            if [[ "$(basename "$f")" != "setup.qd" ]]; then
+            if [[ "$(basename "$f")" != "setup.qd" && "$(basename "$f")" != "setup_detail.qd" ]]; then
               name=$(basename "$f" .qd)
               quarkdown c "$f" --pipe --allow global-read | sed \
                 -e 's|src="\./script/|src="/script/|g' \
