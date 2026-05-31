@@ -12,3 +12,12 @@
             •
             
             [Guide Index](/network-guide/index.html)
+
+.function {pagination}
+    prevtitle? prevlink? nexttitle? nextlink? content?:
+    .container classname:{pagination-container} fullwidth:{yes}
+        .row gap:{16px}
+            .if {.prevlink::isnone::not}
+                .html {<div class="container pagination-card prev-card"><a href="} .prevlink .html {"><span class="prev-label">← 上一章</span></a><div class="container pagination-title"><a href="} .prevlink .html {">} .prevtitle .html {</a></div></div>}
+            .if {.nextlink::isnone::not}
+                .html {<div class="container pagination-card next-card"><a href="} .nextlink .html {"><span class="next-label">下一章 →</span></a><div class="container pagination-title"><a href="} .nextlink .html {">} .nexttitle .html {</a></div></div>}
