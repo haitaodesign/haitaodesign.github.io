@@ -1,6 +1,5 @@
 .docname {📊 02｜全球化网络资产清单与成本核算}
-.include {setup_detail.qd}
-.guidepost
+.include {qd/docs}
 
 > 跟 Brett 一起，通往自由与安全的网络世界
 
@@ -88,9 +87,3 @@
 2. **美号保号策略**：官方渠道 $10/月，稳定安全；需配合支持 Wi-Fi Calling 的机型。
 3. **网络冗余**：**魔戒 (Mojie)** 作为按量计费备用，国内可直接访问，是解决“第一个翻墙工具从哪下载”问题的最佳方案。
 4. **动态调整**：对于 AI 订阅，可随用随开。
-
-.var {prevtitle} {01｜为什么要建立全球化网络观？}
-.var {prevlink} {01_why_share.html}
-.var {nexttitle} {03｜三步快速跑通国际互联网访问}
-.var {nextlink} {03_quick_access.html}
-.include {pagination.qd}

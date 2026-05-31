@@ -1,6 +1,5 @@
 .docname {🚀 03｜三步快速跑通国际互联网访问}
-.include {setup_detail.qd}
-.guidepost
+.include {qd/docs}
 
 想要快速访问国际互联网，第一步不是买软件，而是**识别清楚你手中的设备**，因为不同系统的门槛完全不同。
 
@@ -43,9 +42,3 @@
 ---
 
 > **下一步**: 跑通访问后，我们需要申请一个真正属于自己的谷歌账号 (Gmail)。
-
-.var {prevtitle} {02｜全球化网络资产清单与成本核算}
-.var {prevlink} {02_network_assets.html}
-.var {nexttitle} {04｜如何申请谷歌账号 (Google Account)}
-.var {nextlink} {04_google_account.html}
-.include {pagination.qd}

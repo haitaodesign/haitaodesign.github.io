@@ -1,6 +1,5 @@
 .docname {🆔 04｜如何申请谷歌账号 (Google Account)}
-.include {setup_detail.qd}
-.guidepost
+.include {qd/docs}
 
 当你已经能够成功访问国际互联网后，接下来最重要的一件事能让你真正成为“数字公民”：拥有一个属于自己的谷歌账号。
 
@@ -31,9 +30,3 @@
 ---
 
 > **结语**: 掌握了账号申请，你就拥有了自由探索全球知识库的“数字通行证”。
-
-.var {prevtitle} {03｜三步快速跑通国际互联网访问}
-.var {prevlink} {03_quick_access.html}
-.var {nexttitle} {05｜国内先行准备：证件与支付工具}
-.var {nextlink} {05_preparation.html}
-.include {pagination.qd}

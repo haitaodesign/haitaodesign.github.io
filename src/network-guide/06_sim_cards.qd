@@ -1,6 +1,5 @@
 .docname {📱 06｜海外电话卡选购与避坑指南}
-.include {setup_detail.qd}
-.guidepost
+.include {qd/docs}
 
 > 在建立全球化网络资产的过程中，一张稳定的海外电话卡是注册各类核心平台（Google, OpenAI, PayPal 等）的关键。
 
@@ -54,13 +53,5 @@ MySim 5G（中国移动香港出品）是目前性价比最高的港号方案。
 > 2. **备用号**：选 MySim 5G (港号)，用于注册各类社交软件及日常验证。
 > 3. **设备配合**：建议准备一台支持 **Wi-Fi Calling** 的手机（如 iPhone 11 及以上机型），以确保在国内信号不佳时仍能稳定接收短信。
 
----
-
 > **相关阅读**:
 > - [📊 02｜全球化网络资产清单与成本核算](02_network_assets.html)
-
-.var {prevtitle} {05｜国内先行准备：证件与支付工具}
-.var {prevlink} {05_preparation.html}
-.var {nexttitle} {}
-.var {nextlink} {}
-.include {pagination.qd}
