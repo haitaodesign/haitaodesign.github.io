@@ -1,7 +1,7 @@
 /* shadcn/ui-inspired zinc theme — neutral, minimal */
 /* Tokens: https://ui.shadcn.com/themes (zinc, light) */
 
-body,
+body.quarkdown-plain,
 .qd-content {
   font-family: var(--qd-heading-custom-font, 'Outfit'), ui-sans-serif, system-ui, sans-serif !important;
 }
@@ -29,14 +29,14 @@ body.quarkdown.quarkdown-plain > main {
   margin-right: auto !important;
 }
 
-h1 {
+body.quarkdown-plain h1 {
   font-size: 2.25rem !important;
   font-weight: 600 !important;
   letter-spacing: -0.025em !important;
   line-height: 1.2 !important;
 }
 
-h2 {
+body.quarkdown-plain h2 {
   font-size: 1.5rem !important;
   font-weight: 600 !important;
   letter-spacing: -0.025em !important;
@@ -44,28 +44,28 @@ h2 {
   margin-top: 2.5rem !important;
 }
 
-h3 {
+body.quarkdown-plain h3 {
   font-size: 1.25rem !important;
   font-weight: 600 !important;
   letter-spacing: -0.015em !important;
 }
 
-a {
+body.quarkdown-plain a {
   text-decoration: none !important;
   color: var(--qd-link-color, #18181b) !important;
 }
 
-a:not(.sidebar a) {
+body.quarkdown-plain a:not(.sidebar a) {
   transition: color 0.15s ease;
 }
 
-a:not(.sidebar a):hover {
+body.quarkdown-plain a:not(.sidebar a):hover {
   color: #09090b !important;
   text-decoration: underline !important;
   text-underline-offset: 4px !important;
 }
 
-a:not(.sidebar a, .blog-item-link-wrapper)::after {
+body.quarkdown-plain a:not(.sidebar a, .blog-item-link-wrapper)::after {
   content: none !important;
 }
 
@@ -273,7 +273,7 @@ a:not(.sidebar a, .blog-item-link-wrapper)::after {
 }
 
 /* Callouts / Blockquotes */
-blockquote {
+body.quarkdown-plain blockquote {
   margin: 1.5rem 0 !important;
   padding: 1.25rem 1.5rem !important;
   border-left: 4px solid #e4e4e7 !important;
@@ -282,7 +282,7 @@ blockquote {
   color: #3f3f46 !important;
 }
 
-blockquote::before {
+body.quarkdown-plain blockquote::before {
   content: var(--quote-type-label) !important;
   display: block !important;
   font-weight: 600 !important;
@@ -292,7 +292,7 @@ blockquote::before {
   letter-spacing: 0.05em !important;
 }
 
-blockquote p {
+body.quarkdown-plain blockquote p {
   margin: 0 !important;
   font-size: 0.95rem !important;
   line-height: 1.6 !important;
