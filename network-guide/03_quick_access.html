@@ -23,7 +23,7 @@ body {
     --qd-line-height: 1.7000000476837158;}
 </style>
     <script>prepare(new PlainDocument());</script>
-<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="_1-识别你的设备-核心第一步" data-depth="2"><a href="#_1-识别你的设备-核心第一步">1. 识别你的设备 (核心第一步)</a><ol><li data-target-id="brett-的设备指南-供参考" data-depth="3"><a href="#brett-的设备指南-供参考">Brett 的设备指南 (供参考)</a></li></ol></li><li data-target-id="_2-三步快速跑通流程" data-depth="2"><a href="#_2-三步快速跑通流程">2. 三步快速跑通流程</a><ol><li data-target-id="第一步获取订阅-通行证" data-depth="3"><a href="#第一步获取订阅-通行证">第一步：获取订阅 (通行证)</a></li><li data-target-id="第二步安装客户端-交通工具" data-depth="3"><a href="#第二步安装客户端-交通工具">第二步：安装客户端 (交通工具)</a></li><li data-target-id="第三步配置与连接" data-depth="3"><a href="#第三步配置与连接">第三步：配置与连接</a></li></ol></li></ol></nav>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="-03三步快速跑通国际互联网访问" data-depth="1"><a href="#-03三步快速跑通国际互联网访问">🚀 03｜三步快速跑通国际互联网访问</a><ol><li data-target-id="_1-识别你的设备-核心第一步" data-depth="2"><a href="#_1-识别你的设备-核心第一步">1. 识别你的设备 (核心第一步)</a><ol><li data-target-id="brett-的设备指南-供参考" data-depth="3"><a href="#brett-的设备指南-供参考">Brett 的设备指南 (供参考)</a></li></ol></li><li data-target-id="_2-三步快速跑通流程" data-depth="2"><a href="#_2-三步快速跑通流程">2. 三步快速跑通流程</a><ol><li data-target-id="第一步获取订阅-通行证" data-depth="3"><a href="#第一步获取订阅-通行证">第一步：获取订阅 (通行证)</a></li><li data-target-id="第二步安装客户端-交通工具" data-depth="3"><a href="#第二步安装客户端-交通工具">第二步：安装客户端 (交通工具)</a></li><li data-target-id="第三步配置与连接" data-depth="3"><a href="#第三步配置与连接">第三步：配置与连接</a></li></ol></li></ol></li></ol></nav>
 </template>  </head>
   <body class="quarkdown quarkdown-plain">
     <aside class="margin-area" id="margin-area-left"></aside>
@@ -37,25 +37,25 @@ body,
 
 body.quarkdown.quarkdown-plain {
   display: flex !important;
-  justify-content: center !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 1.5rem !important;
 }
 
 body.quarkdown.quarkdown-plain > aside.margin-area:empty {
-  flex: 0 0 0 !important;
-  width: 0 !important;
-  min-width: 0 !important;
-  max-width: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
+  display: none !important;
 }
 
 body.quarkdown.quarkdown-plain > main {
-  flex: 0 1 var(--qd-content-width, 45rem) !important;
+  flex: 1 0 auto !important;
   width: 100% !important;
   max-width: var(--qd-content-width, 45rem) !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  box-sizing: border-box !important;
 }
 
 h1 {
@@ -404,8 +404,8 @@ blockquote.warning::before {
   text-align: right !important;
   align-items: flex-end !important;
 }
-
-.pagination-card a {
+.pagination-card .prev-label,
+.pagination-card .next-label {
   font-size: 0.8rem !important;
   font-weight: 500 !important;
   color: #71717a !important;
@@ -414,8 +414,8 @@ blockquote.warning::before {
   margin-bottom: 0.35rem !important;
 }
 
-.pagination-card:hover a {
-  text-decoration: none !important;
+.pagination-card:hover .prev-label,
+.pagination-card:hover .next-label {
   color: #18181b !important;
 }
 
@@ -441,11 +441,25 @@ blockquote.warning::before {
   gap: 0.5rem !important;
 }
 
+.blog-navigation p,
+.pagination-container p {
+  display: contents !important;
+}
+
 .blog-navigation .stack-row p {
   margin: 0 !important;
 }
 
-</style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p><p>•</p><p><a href="/network-guide/index.html">Guide Index</a></p></div></div><p>想要快速访问国际互联网，第一步不是买软件，而是<strong>识别清楚你手中的设备</strong>，因为不同系统的门槛完全不同。</p><h2 id="_1-识别你的设备-核心第一步">1. 识别你的设备 (核心第一步)</h2><p>在开始之前，请确认你使用的设备系统：</p><ul><li><strong>Windows / MacOS</strong>: 门槛最低，直接下载安装包即可使用。</li><li><strong>Android (安卓)</strong>: 门槛较低，下载 APK 安装包导入配置即可。</li><li><strong>iOS (iPhone/iPad)</strong>: <strong>门槛最高</strong>，需要海外 Apple ID 才能下载工具（Shadowrocket）。</li></ul><h3 id="brett-的设备指南-供参考">Brett 的设备指南 (供参考)</h3><p>我个人的方案是“多端同步”：</p><ul><li><strong>办公</strong>: Mac 端开启小火箭或 Clash。</li><li><strong>移动</strong>: iPhone 长期挂载小火箭（配置模式），保证微信不卡顿的同时，Google/YouTube 随时秒开。</li></ul><hr /><h2 id="_2-三步快速跑通流程">2. 三步快速跑通流程</h2><p>不管什么设备，跑通的核心逻辑只有三步：</p><h3 id="第一步获取订阅-通行证">第一步：获取订阅 (通行证)</h3><ol><li>注册 VPN 服务商。<ul><li><strong>新手/尝鲜首选</strong>: <a href="https://47.112.97.173:5000/#/register?code=ckRczTHV">魔戒 Mojie (IP直连注册)</a> (支持<strong>国内网络直连访问</strong>，按流量计费，1元起用)</li><li><strong>进阶/稳定推荐</strong>: <a href="https://cn.forest2026.com/register?code=ZIuUNrO0">Forest / 奶猫</a> (专属邀请链接，作者含佣金支持)</li><li><strong>官方站点</strong>: <a href="https://cn.forest2026.com/">https://cn.forest2026.com/</a> (若上述链接失效请从此获取最新地址)</li></ul></li><li>购买一个基础套餐（建议新手先买 <strong>388.88元/200G 不限时</strong> 套餐，或魔戒的低额按量套餐）。</li><li>（可选）如果你打算使用第三方客户端，请在后台找到“一键导入”或“复制订阅地址”。</li></ol><h3 id="第二步安装客户端-交通工具">第二步：安装客户端 (交通工具)</h3><ul><li><strong>Forest 官方客户端 (推荐)</strong>: Forest 现已提供官方客户端，支持全平台。请直接访问 <a href="https://cn.forest2026.com/download">下载与教程中心</a>，下载对应的应用（内含详细图文与视频教程）。</li><li><strong>魔戒用户 (教程与客户端)</strong>: 魔戒需配合第三方客户端使用。注册登录后，请直接访问 <a href="https://47.112.97.173:5000/#/knowledge">魔戒使用文档</a>，获取各平台客户端的下载及详细配置指南。</li><li><strong>iOS 补充说明</strong>: 针对 iOS 用户，若使用第三方工具，需准备美区 Apple ID 登录 App Store 下载 <strong>Shadowrocket (小火箭)</strong>。</li></ul><h3 id="第三步配置与连接">第三步：配置与连接</h3><ul><li><strong>使用官方客户端</strong>: 下载后打开应用，<strong>直接登录账号</strong>即可一键连接使用，极其简单。</li><li><strong>使用第三方客户端</strong>: 将第一步获取的“订阅地址”粘贴到客户端中，点击“连接”开关。<ul><li><strong>关键提醒</strong>: 模式务必选择 <strong>「配置 (Rule)」</strong>，不要选择「全局 (Global)」，否则国内 App 会变慢。</li></ul></li></ul><hr /><blockquote><p><strong>下一步</strong>: 跑通访问后，我们需要申请一个真正属于自己的谷歌账号 (Gmail)。</p></blockquote><div class="container fullwidth pagination-container"><div style="justify-content: flex-start; align-items: center; column-gap: 16.0px;" class="stack stack-row"><p><div class="container pagination-card prev-card"><a href=" 02_network_assets.html "><span class="prev-label">← 上一章</span></a><div class="container pagination-title"><a href=" 02_network_assets.html "> 02｜全球化网络资产清单与成本核算 </a></div></div></p><p><div class="container pagination-card next-card"><a href=" 04_google_account.html "><span class="next-label">下一章 →</span></a><div class="container pagination-title"><a href=" 04_google_account.html "> 04｜如何申请谷歌账号 (Google Account) </a></div></div></p></div></div></main>
+
+</style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p><p>•</p><p><a href="/network-guide/index.html">Guide Index</a></p></div></div><h1 class="page-break" id="-03三步快速跑通国际互联网访问">🚀 03｜三步快速跑通国际互联网访问</h1><p>想要快速访问国际互联网，第一步不是买软件，而是<strong>识别清楚你手中的设备</strong>，因为不同系统的门槛完全不同。</p><h2 id="_1-识别你的设备-核心第一步">1. 识别你的设备 (核心第一步)</h2><p>在开始之前，请确认你使用的设备系统：</p><ul><li><strong>Windows / MacOS</strong>: 门槛最低，直接下载安装包即可使用。</li><li><strong>Android (安卓)</strong>: 门槛较低，下载 APK 安装包导入配置即可。</li><li><strong>iOS (iPhone/iPad)</strong>: <strong>门槛最高</strong>，需要海外 Apple ID 才能下载工具（Shadowrocket）。</li></ul><h3 id="brett-的设备指南-供参考">Brett 的设备指南 (供参考)</h3><p>我个人的方案是“多端同步”：</p><ul><li><strong>办公</strong>: Mac 端开启小火箭或 Clash。</li><li><strong>移动</strong>: iPhone 长期挂载小火箭（配置模式），保证微信不卡顿的同时，Google/YouTube 随时秒开。</li></ul><hr /><h2 id="_2-三步快速跑通流程">2. 三步快速跑通流程</h2><p>不管什么设备，跑通的核心逻辑只有三步：</p><h3 id="第一步获取订阅-通行证">第一步：获取订阅 (通行证)</h3><ol><li>注册 VPN 服务商。<ul><li><strong>新手/尝鲜首选</strong>: <a href="https://47.112.97.173:5000/#/register?code=ckRczTHV">魔戒 Mojie (IP直连注册)</a> (支持<strong>国内网络直连访问</strong>，按流量计费，1元起用)</li><li><strong>进阶/稳定推荐</strong>: <a href="https://cn.forest2026.com/register?code=ZIuUNrO0">Forest / 奶猫</a> (专属邀请链接，作者含佣金支持)</li><li><strong>官方站点</strong>: <a href="https://cn.forest2026.com/">https://cn.forest2026.com/</a> (若上述链接失效请从此获取最新地址)</li></ul></li><li>购买一个基础套餐（建议新手先买 <strong>388.88元/200G 不限时</strong> 套餐，或魔戒的低额按量套餐）。</li><li>（可选）如果你打算使用第三方客户端，请在后台找到“一键导入”或“复制订阅地址”。</li></ol><h3 id="第二步安装客户端-交通工具">第二步：安装客户端 (交通工具)</h3><ul><li><strong>Forest 官方客户端 (推荐)</strong>: Forest 现已提供官方客户端，支持全平台。请直接访问 <a href="https://cn.forest2026.com/download">下载与教程中心</a>，下载对应的应用（内含详细图文与视频教程）。</li><li><strong>魔戒用户 (教程与客户端)</strong>: 魔戒需配合第三方客户端使用。注册登录后，请直接访问 <a href="https://47.112.97.173:5000/#/knowledge">魔戒使用文档</a>，获取各平台客户端的下载及详细配置指南。</li><li><strong>iOS 补充说明</strong>: 针对 iOS 用户，若使用第三方工具，需准备美区 Apple ID 登录 App Store 下载 <strong>Shadowrocket (小火箭)</strong>。</li></ul><h3 id="第三步配置与连接">第三步：配置与连接</h3><ul><li><strong>使用官方客户端</strong>: 下载后打开应用，<strong>直接登录账号</strong>即可一键连接使用，极其简单。</li><li><strong>使用第三方客户端</strong>: 将第一步获取的“订阅地址”粘贴到客户端中，点击“连接”开关。<ul><li><strong>关键提醒</strong>: 模式务必选择 <strong>「配置 (Rule)」</strong>，不要选择「全局 (Global)」，否则国内 App 会变慢。</li></ul></li></ul><hr /><blockquote><p><strong>下一步</strong>: 跑通访问后，我们需要申请一个真正属于自己的谷歌账号 (Gmail)。</p></blockquote><div class="container fullwidth pagination-container">
+    <div style="display: flex; gap: 16px; width: 100%;"><p><a href=" 02_network_assets.html " class="pagination-card prev-card">
+        <span class="prev-label">← 上一章</span>
+        <span class="pagination-title"> 02｜全球化网络资产清单与成本核算 </span>
+    </a></p><p><a href=" 04_google_account.html " class="pagination-card next-card">
+        <span class="next-label">下一章 →</span>
+        <span class="pagination-title"> 04｜如何申请谷歌账号 (Google Account) </span>
+    </a></p></div>
+</div></main>
     <aside class="margin-area" id="margin-area-right"></aside>
   </body>
 </html>

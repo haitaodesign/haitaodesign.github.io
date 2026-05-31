@@ -23,7 +23,7 @@ body {
     --qd-line-height: 1.7000000476837158;}
 </style>
     <script>prepare(new PlainDocument());</script>
-<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="中国是什么时候接入国际互联网的" data-depth="1"><a href="#中国是什么时候接入国际互联网的">中国是什么时候接入国际互联网的？</a></li><li data-target-id="中国为什么不能正常访问国际互联网" data-depth="1"><a href="#中国为什么不能正常访问国际互联网">中国为什么不能“正常访问”国际互联网？</a><ol><li data-target-id="_1-法律与主权层面网络主权cyber-sovereignty" data-depth="3"><a href="#_1-法律与主权层面网络主权cyber-sovereignty">1. 法律与主权层面：网络主权（Cyber Sovereignty）</a></li><li data-target-id="_2-技术层面防火长城gfw的运作机制" data-depth="3"><a href="#_2-技术层面防火长城gfw的运作机制">2. 技术层面：防火长城（GFW）的运作机制</a></li><li data-target-id="_3-经济与产业层面本土保护" data-depth="3"><a href="#_3-经济与产业层面本土保护">3. 经济与产业层面：本土保护</a></li></ol></li><li data-target-id="科学上网在法律层面如何界定" data-depth="1"><a href="#科学上网在法律层面如何界定">科学上网在法律层面如何界定？</a></li></ol></nav>
+<template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="-01为什么要建立全球化网络观" data-depth="1"><a href="#-01为什么要建立全球化网络观">💡 01｜为什么要建立全球化网络观？</a><ol><li data-target-id="中国是什么时候接入国际互联网的" data-depth="2"><a href="#中国是什么时候接入国际互联网的">中国是什么时候接入国际互联网的？</a></li><li data-target-id="中国为什么不能正常访问国际互联网" data-depth="2"><a href="#中国为什么不能正常访问国际互联网">中国为什么不能“正常访问”国际互联网？</a></li><li data-target-id="科学上网在法律层面如何界定" data-depth="2"><a href="#科学上网在法律层面如何界定">科学上网在法律层面如何界定？</a></li></ol></li></ol></nav>
 </template>  </head>
   <body class="quarkdown quarkdown-plain">
     <aside class="margin-area" id="margin-area-left"></aside>
@@ -37,25 +37,25 @@ body,
 
 body.quarkdown.quarkdown-plain {
   display: flex !important;
-  justify-content: center !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 1.5rem !important;
 }
 
 body.quarkdown.quarkdown-plain > aside.margin-area:empty {
-  flex: 0 0 0 !important;
-  width: 0 !important;
-  min-width: 0 !important;
-  max-width: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
+  display: none !important;
 }
 
 body.quarkdown.quarkdown-plain > main {
-  flex: 0 1 var(--qd-content-width, 45rem) !important;
+  flex: 1 0 auto !important;
   width: 100% !important;
   max-width: var(--qd-content-width, 45rem) !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  box-sizing: border-box !important;
 }
 
 h1 {
@@ -404,8 +404,8 @@ blockquote.warning::before {
   text-align: right !important;
   align-items: flex-end !important;
 }
-
-.pagination-card a {
+.pagination-card .prev-label,
+.pagination-card .next-label {
   font-size: 0.8rem !important;
   font-weight: 500 !important;
   color: #71717a !important;
@@ -414,8 +414,8 @@ blockquote.warning::before {
   margin-bottom: 0.35rem !important;
 }
 
-.pagination-card:hover a {
-  text-decoration: none !important;
+.pagination-card:hover .prev-label,
+.pagination-card:hover .next-label {
   color: #18181b !important;
 }
 
@@ -441,11 +441,25 @@ blockquote.warning::before {
   gap: 0.5rem !important;
 }
 
+.blog-navigation p,
+.pagination-container p {
+  display: contents !important;
+}
+
 .blog-navigation .stack-row p {
   margin: 0 !important;
 }
 
-</style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p><p>•</p><p><a href="/network-guide/index.html">Guide Index</a></p></div></div><p>这次主要以入门小白的视角来分享如何通往自由与安全的网络世界，不讲技术，仅分享如何完成最重要的一步？</p><p>最核心的是善于搜索。关于科学上网的帖子比比皆是，找到一个靠谱的东西需要有一定的鉴别能力，对于刚开始接触科学上网的童鞋来说并不是一件容易的事情，踩坑是必然的事情。</p><p>今天为什么会有这个分享？是因为身边的人类似的需求变多了，经常会有人询问我类似的问题是怎么解决的。我不想仅仅告诉他们答案，还要告诉别人背后是怎么解决这个问题的，希望对方也具备跟我一样的能力，打开另外一扇窗口的同时减少被坑的概率——即使我知道少踩的坑一个也少不了。</p><h1 class="page-break" id="中国是什么时候接入国际互联网的">中国是什么时候接入国际互联网的？</h1><p>中国互联网的发展通常被认为有两个关键的“起点”：</p><ol><li><p><strong>第一封电子邮件（1987年）：</strong> 1987年9月14日，北京市计算机应用技术研究所发出了中国第一封电子邮件。邮件内容至今听起来仍具震撼力：</p><blockquote><p><strong>“Across the Great Wall we can reach every corner in the world.”</strong> （越过长城，走向世界。） 这封邮件经过6天才到达德国卡尔斯鲁厄大学，象征着中国迈出了走向世界网络的第一步。</p></blockquote></li><li><p><strong>全功能接入（1994年）：</strong> 虽然1987年有了电邮，但那只是通过拨号实现的间歇性连接。<strong>1994年4月20日</strong>，中国科学院开通了首条64K国际专线，实现了与国际互联网的<strong>全功能连接</strong>。从此，中国正式成为国际互联网的第77个成员。</p></li></ol><h1 class="page-break" id="中国为什么不能正常访问国际互联网">中国为什么不能“正常访问”国际互联网？</h1><p>中国不能正常访问部分国际互联网资源，主要涉及法律、技术和经济三个层面：</p><h3 id="_1-法律与主权层面网络主权cyber-sovereignty">1. 法律与主权层面：网络主权（Cyber Sovereignty）</h3><p>中国政府提出“网络主权”的概念，认为互联网应当受到该国法律的管辖：</p><ul><li><strong>管理需求：</strong> 为了防止色情、赌博、网络诈骗以及被认定为危害国家安全的信息传播。</li><li><strong>内容审查：</strong> 依据《网络安全法》等法规，对不符合国内监管要求的境外平台实施限制。</li></ul><h3 id="_2-技术层面防火长城gfw的运作机制">2. 技术层面：防火长城（GFW）的运作机制</h3><p>GFW 是一套复杂的系统，通过以下手段拦截信息：</p><ul><li><strong>IP 封锁：</strong> 直接屏蔽特定服务器的 IP 地址（如 Google、Facebook）。</li><li><strong>DNS 污染：</strong> 当你查询这些网站时，返回错误的解析结果。</li><li><strong>关键词过滤（TCP 重置）：</strong> 监控数据包中的敏感词，一旦发现，强行切断连接。</li></ul><h3 id="_3-经济与产业层面本土保护">3. 经济与产业层面：本土保护</h3><p>客观上，访问限制为国内互联网企业（如百度、腾讯、字节跳动）提供了一个巨大的“温室”环境，使其能迅速填补全球巨头被屏蔽后的市场空白。</p><h1 class="page-break" id="科学上网在法律层面如何界定">科学上网在法律层面如何界定？</h1><p>从法律和政策层面来看，个人通过非官方渠道绕过网络审查访问国际互联网是受到严格限制的。主要依据包括：</p><ol><li><p><strong>《中华人民共和国网络安全法》第二十七条</strong>：</p><blockquote><p>“任何个人和组织……不得提供专门用于从事侵入网络、干扰网络正常功能及防护措施、窃取网络数据等危害网络安全活动的程序、工具。” (这通常被视为针对 VPN 开发与提供的法律约束)</p></blockquote></li><li><p><strong>《中华人民共和国计算机信息网络国际联网管理暂行规定》第六条</strong>：</p><blockquote><p>“计算机信息网络直接进行国际联网，必须使用邮电部（现由工信部承接职能）国家公用电信网提供的国际出入口信道。<strong>任何单位和个人不得自行建立或者使用其他信道进行国际联网。</strong>” (这是界定“翻墙”违法行为最直接的行政法规)</p></blockquote></li></ol><p><strong>核心提示：</strong></p><ul><li>个人合法合规访问国际互联网的渠道通常仅限于官方授权的跨境专线。</li><li>常见的 VPN 翻墙方式在法律层面通常被界定为“使用非法定信道”。</li><li><strong>请仅将相关工具作为个人学习、学术研究和技术开发使用，严禁利用相关工具传播非法信息或进行商业营利。</strong></li></ul><p>通往自由和安全的网络世界需要一定的自我学习能力与辨别能力，请务必保持谨慎。</p><div class="container fullwidth pagination-container"><div style="justify-content: flex-start; align-items: center; column-gap: 16.0px;" class="stack stack-row"><p><div class="container pagination-card prev-card"><a href=" index.html "><span class="prev-label">← 上一章</span></a><div class="container pagination-title"><a href=" index.html "> 全球化网络优化全指南 </a></div></div></p><p><div class="container pagination-card next-card"><a href=" 02_network_assets.html "><span class="next-label">下一章 →</span></a><div class="container pagination-title"><a href=" 02_network_assets.html "> 02｜全球化网络资产清单与成本核算 </a></div></div></p></div></div></main>
+
+</style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p><p>•</p><p><a href="/network-guide/index.html">Guide Index</a></p></div></div><h1 class="page-break" id="-01为什么要建立全球化网络观">💡 01｜为什么要建立全球化网络观？</h1><p>这次主要以入门小白的视角来分享如何通往自由与安全的网络世界，不讲技术，仅分享如何完成最重要的一步？</p><p>最核心的是善于搜索。关于科学上网的帖子比比皆是，找到一个靠谱的东西需要有一定的鉴别能力，对于刚开始接触科学上网的童鞋来说并不是一件容易的事情，踩坑是必然的事情。</p><p>今天为什么会有这个分享？是因为身边的人类似的需求变多了，经常会有人询问我类似的问题是怎么解决的。我不想仅仅告诉他们答案，还要告诉别人背后是怎么解决这个问题的，希望对方也具备跟我一样的能力，打开另外一扇窗口的同时减少被坑的概率——即使我知道少踩的坑一个也少不了。</p><h2 id="中国是什么时候接入国际互联网的">中国是什么时候接入国际互联网的？</h2><p>中国互联网的发展通常被认为有两个关键的“起点”：</p><ol><li><p><strong>第一封电子邮件（1987年）：</strong> 1987年9月14日，北京市计算机应用技术研究所发出了中国第一封电子邮件。邮件内容至今听起来仍具震撼力：</p><blockquote><p><strong>“Across the Great Wall we can reach every corner in the world.”</strong> （越过长城，走向世界。） 这封邮件经过6天才到达德国卡尔斯鲁厄大学，象征着中国迈出了走向世界网络的第一步。</p></blockquote></li><li><p><strong>全功能接入（1994年）：</strong> 虽然1987年有了电邮，但那只是通过拨号实现的间歇性连接。<strong>1994年4月20日</strong>，中国科学院开通了首条64K国际专线，实现了与国际互联网的<strong>全功能连接</strong>。从此，中国正式成为国际互联网的第77个成员。</p></li></ol><h2 id="中国为什么不能正常访问国际互联网">中国为什么不能“正常访问”国际互联网？</h2><p>中国不能正常访问部分国际互联网资源，主要涉及法律、技术和经济三个层面：</p><h4 id="_1-法律与主权层面网络主权cyber-sovereignty">1. 法律与主权层面：网络主权（Cyber Sovereignty）</h4><p>中国政府提出“网络主权”的概念，认为互联网应当受到该国法律的管辖：</p><ul><li><strong>管理需求：</strong> 为了防止色情、赌博、网络诈骗以及被认定为危害国家安全的信息传播。</li><li><strong>内容审查：</strong> 依据《网络安全法》等法规，对不符合国内监管要求的境外平台实施限制。</li></ul><h4 id="_2-技术层面防火长城gfw的运作机制">2. 技术层面：防火长城（GFW）的运作机制</h4><p>GFW 是一套复杂的系统，通过以下手段拦截信息：</p><ul><li><strong>IP 封锁：</strong> 直接屏蔽特定服务器的 IP 地址（如 Google、Facebook）。</li><li><strong>DNS 污染：</strong> 当你查询这些网站时，返回错误的解析结果。</li><li><strong>关键词过滤（TCP 重置）：</strong> 监控数据包中的敏感词，一旦发现，强行切断连接。</li></ul><h4 id="_3-经济与产业层面本土保护">3. 经济与产业层面：本土保护</h4><p>客观上，访问限制为国内互联网企业（如百度、腾讯、字节跳动）提供了一个巨大的“温室”环境，使其能迅速填补全球巨头被屏蔽后的市场空白。</p><h2 id="科学上网在法律层面如何界定">科学上网在法律层面如何界定？</h2><p>从法律和政策层面来看，个人通过非官方渠道绕过网络审查访问国际互联网是受到严格限制的。主要依据包括：</p><ol><li><p><strong>《中华人民共和国网络安全法》第二十七条</strong>：</p><blockquote><p>“任何个人和组织……不得提供专门用于从事侵入网络、干扰网络正常功能及防护措施、窃取网络数据等危害网络安全活动的程序、工具。” (这通常被视为针对 VPN 开发与提供的法律约束)</p></blockquote></li><li><p><strong>《中华人民共和国计算机信息网络国际联网管理暂行规定》第六条</strong>：</p><blockquote><p>“计算机信息网络直接进行国际联网，必须使用邮电部（现由工信部承接职能）国家公用电信网提供的国际出入口信道。<strong>任何单位和个人不得自行建立或者使用其他信道进行国际联网。</strong>” (这是界定“翻墙”违法行为最直接的行政法规)</p></blockquote></li></ol><p><strong>核心提示：</strong></p><ul><li>个人合法合规访问国际互联网的渠道通常仅限于官方授权的跨境专线。</li><li>常见的 VPN 翻墙方式在法律层面通常被界定为“使用非法定信道”。</li><li><strong>请仅将相关工具作为个人学习、学术研究和技术开发使用，严禁利用相关工具传播非法信息或进行商业营利。</strong></li></ul><p>通往自由和安全的网络世界需要一定的自我学习能力与辨别能力，请务必保持谨慎。</p><div class="container fullwidth pagination-container">
+    <div style="display: flex; gap: 16px; width: 100%;"><p><a href=" index.html " class="pagination-card prev-card">
+        <span class="prev-label">← 上一章</span>
+        <span class="pagination-title"> 全球化网络优化全指南 </span>
+    </a></p><p><a href=" 02_network_assets.html " class="pagination-card next-card">
+        <span class="next-label">下一章 →</span>
+        <span class="pagination-title"> 02｜全球化网络资产清单与成本核算 </span>
+    </a></p></div>
+</div></main>
     <aside class="margin-area" id="margin-area-right"></aside>
   </body>
 </html>
