@@ -37,20 +37,44 @@ body,
 
 body.quarkdown.quarkdown-plain {
   display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
+  flex-direction: row !important;
+  justify-content: center !important;
   min-height: 100vh !important;
   margin: 0 !important;
   padding: 0 1.5rem !important;
+  position: relative !important;
+}
+
+/* 侧边栏绝对/固定定位，保证正文完美居中 */
+body.quarkdown.quarkdown-plain > aside.margin-area {
+  position: fixed !important;
+  top: 6rem !important;
+  width: 16rem !important;
+  max-height: calc(100vh - 10rem) !important;
+  overflow-y: auto !important;
+  z-index: 10 !important;
+}
+
+body.quarkdown.quarkdown-plain > aside#margin-area-left {
+  left: 2rem !important;
+}
+
+body.quarkdown.quarkdown-plain > aside#margin-area-right {
+  right: 2rem !important;
 }
 
 body.quarkdown.quarkdown-plain > aside.margin-area:empty {
   display: none !important;
 }
 
+@media (max-width: 1200px) {
+  body.quarkdown.quarkdown-plain > aside.margin-area {
+    display: none !important;
+  }
+}
+
 body.quarkdown.quarkdown-plain > main {
-  flex: 1 0 auto !important;
+  flex: 0 1 var(--qd-content-width, 45rem) !important;
   width: 100% !important;
   max-width: var(--qd-content-width, 45rem) !important;
   margin-left: auto !important;
@@ -449,6 +473,63 @@ blockquote.warning::before {
 .blog-navigation .stack-row p {
   margin: 0 !important;
 }
+
+/* 侧边栏 Toc 美化 */
+.sidebar {
+  font-family: var(--qd-heading-custom-font, 'Outfit'), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.sidebar nav[role="doc-toc"] ol {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.sidebar nav[role="doc-toc"] li {
+  margin-top: 0 !important;
+  margin-bottom: 0.65rem !important;
+  line-height: 1.4 !important;
+}
+
+.sidebar nav[role="doc-toc"] a {
+  font-size: 0.875rem !important;
+  color: #71717a !important;
+  transition: color 0.15s ease, border-color 0.15s ease !important;
+  display: block !important;
+  padding: 0.15rem 0 !important;
+}
+
+.sidebar nav[role="doc-toc"] a:hover {
+  color: #18181b !important;
+  text-decoration: none !important;
+}
+
+.sidebar nav[role="doc-toc"] li[data-depth="1"] {
+  font-weight: 500 !important;
+}
+
+.sidebar nav[role="doc-toc"] li[data-depth="1"] > a {
+  color: #27272a !important;
+}
+
+.sidebar nav[role="doc-toc"] li[data-depth="2"],
+.sidebar nav[role="doc-toc"] li[data-depth="3"] {
+  padding-left: 0.75rem !important;
+  font-weight: normal !important;
+  border-left: 1px solid #e4e4e7 !important;
+}
+
+.sidebar nav[role="doc-toc"] li[data-depth="2"] > a,
+.sidebar nav[role="doc-toc"] li[data-depth="3"] > a {
+  color: #71717a !important;
+}
+
+.sidebar nav[role="doc-toc"] li[data-depth="2"] > a:hover,
+.sidebar nav[role="doc-toc"] li[data-depth="3"] > a:hover {
+  color: #18181b !important;
+  border-left-color: #09090b !important;
+}
+
 
 
 </style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p><p>•</p><p><a href="/network-guide/index.html">Guide Index</a></p></div></div><h1 class="page-break" id="-02全球化网络资产清单与成本核算">📊 02｜全球化网络资产清单与成本核算</h1><blockquote><p>跟 Brett 一起，通往自由与安全的网络世界</p></blockquote><h2 id="状态内容填充中-">状态：内容填充中 ✍️</h2><hr /><blockquote class="tip" style="--quote-type-label: 'Tip';" data-labeled=""><p>全球互联网极简访问链路：设备与工具清单

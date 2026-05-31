@@ -37,20 +37,44 @@ body,
 
 body.quarkdown.quarkdown-plain {
   display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
+  flex-direction: row !important;
+  justify-content: center !important;
   min-height: 100vh !important;
   margin: 0 !important;
   padding: 0 1.5rem !important;
+  position: relative !important;
+}
+
+/* 侧边栏绝对/固定定位，保证正文完美居中 */
+body.quarkdown.quarkdown-plain > aside.margin-area {
+  position: fixed !important;
+  top: 6rem !important;
+  width: 16rem !important;
+  max-height: calc(100vh - 10rem) !important;
+  overflow-y: auto !important;
+  z-index: 10 !important;
+}
+
+body.quarkdown.quarkdown-plain > aside#margin-area-left {
+  left: 2rem !important;
+}
+
+body.quarkdown.quarkdown-plain > aside#margin-area-right {
+  right: 2rem !important;
 }
 
 body.quarkdown.quarkdown-plain > aside.margin-area:empty {
   display: none !important;
 }
 
+@media (max-width: 1200px) {
+  body.quarkdown.quarkdown-plain > aside.margin-area {
+    display: none !important;
+  }
+}
+
 body.quarkdown.quarkdown-plain > main {
-  flex: 1 0 auto !important;
+  flex: 0 1 var(--qd-content-width, 45rem) !important;
   width: 100% !important;
   max-width: var(--qd-content-width, 45rem) !important;
   margin-left: auto !important;
@@ -449,6 +473,63 @@ blockquote.warning::before {
 .blog-navigation .stack-row p {
   margin: 0 !important;
 }
+
+/* 侧边栏 Toc 美化 */
+.sidebar {
+  font-family: var(--qd-heading-custom-font, 'Outfit'), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.sidebar nav[role="doc-toc"] ol {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.sidebar nav[role="doc-toc"] li {
+  margin-top: 0 !important;
+  margin-bottom: 0.65rem !important;
+  line-height: 1.4 !important;
+}
+
+.sidebar nav[role="doc-toc"] a {
+  font-size: 0.875rem !important;
+  color: #71717a !important;
+  transition: color 0.15s ease, border-color 0.15s ease !important;
+  display: block !important;
+  padding: 0.15rem 0 !important;
+}
+
+.sidebar nav[role="doc-toc"] a:hover {
+  color: #18181b !important;
+  text-decoration: none !important;
+}
+
+.sidebar nav[role="doc-toc"] li[data-depth="1"] {
+  font-weight: 500 !important;
+}
+
+.sidebar nav[role="doc-toc"] li[data-depth="1"] > a {
+  color: #27272a !important;
+}
+
+.sidebar nav[role="doc-toc"] li[data-depth="2"],
+.sidebar nav[role="doc-toc"] li[data-depth="3"] {
+  padding-left: 0.75rem !important;
+  font-weight: normal !important;
+  border-left: 1px solid #e4e4e7 !important;
+}
+
+.sidebar nav[role="doc-toc"] li[data-depth="2"] > a,
+.sidebar nav[role="doc-toc"] li[data-depth="3"] > a {
+  color: #71717a !important;
+}
+
+.sidebar nav[role="doc-toc"] li[data-depth="2"] > a:hover,
+.sidebar nav[role="doc-toc"] li[data-depth="3"] > a:hover {
+  color: #18181b !important;
+  border-left-color: #09090b !important;
+}
+
 
 
 </style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p><p>•</p><p><a href="/network-guide/index.html">Guide Index</a></p></div></div><h1 class="page-break" id="全球化网络优化全指南">全球化网络优化全指南</h1><blockquote><p>跟 Brett 一起，通往自由与安全的网络世界。</p></blockquote><p>本专栏面向三类读者，从 0 到 1 逐级递进：</p><hr /><h2 id="目录">目录</h2><h3 id="lv1-普通人-非技术--极简访问与数字公民">Lv.1 普通人 (非技术) —— 极简访问与数字公民</h3><h4 id="_1-入门常识">1. 入门常识</h4><ul><li><a href="01_why_share.html">💡 01｜为什么要建立全球化网络观？</a></li></ul><h4 id="_2-资产与成本背景-参考">2. 资产与成本背景 (参考)</h4><ul><li><a href="02_network_assets.html">📊 02｜全球化网络资产清单与成本核算</a></li></ul><h4 id="_3-快速跑通指南-核心">3. 快速跑通指南 (核心)</h4><ul><li><a href="03_quick_access.html">🚀 03｜三步快速跑通国际互联网访问</a><ul><li><em>识别设备：识别清楚自己的设备</em></li><li><em>我的设备使用指南供参考</em></li><li><em>三步跑通流程</em></li></ul></li></ul><h4 id="_4-进阶配置">4. 进阶配置</h4><ul><li><a href="04_google_account.html">🆔 04｜如何申请谷歌账号 (Google Account)</a></li><li><a href="05_preparation.html">💳 05｜国内先行准备：证件与支付工具</a></li><li><a href="06_sim_cards.html">📱 06｜海外电话卡选购与避坑指南</a></li></ul><hr /><h3 id="lv2-技术研发人员--生产力加速与环境隔离">Lv.2 技术研发人员 —— 生产力加速与环境隔离</h3><ul><li><em>方案待定&hellip;</em></li></ul><h3 id="lv3-企业需求--合规跨境与业务出海">Lv.3 企业需求 —— 合规跨境与业务出海</h3><ul><li><em>规划中&hellip;</em></li></ul><hr /><blockquote><p><strong>创作目录</strong>：<span class="codespan-content"><code>40_Output/01_Network_Optimization/</code></span></p></blockquote><div class="container fullwidth pagination-container">
