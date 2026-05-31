@@ -24,12 +24,12 @@ jobs:
         run: |
           set -o pipefail
           quarkdown c src/main.qd --out-name site --clean --strict 2>&1 | tee build.log
-          # Compile docs section: one command builds all 6 article subdirectories
-          quarkdown c src/network-guide-v2/01_why_share.qd --allow global-read \
-            -o quarkdown-output/site --out-name network-guide-v2
+          # Compile docs section: one command builds all articles
+          quarkdown c src/network-guide/01_why_share.qd --allow global-read \
+            -o quarkdown-output/site --out-name network-guide
           # Compile the network-guide index as a standard doc
-          quarkdown c src/network-guide-v2/index.qd --allow global-read \
-            -o quarkdown-output/site --out-name network-guide-v2
+          quarkdown c src/network-guide/index.qd --allow global-read \
+            -o quarkdown-output/site --out-name network-guide
 
       - name: Verify build output
         run: |
