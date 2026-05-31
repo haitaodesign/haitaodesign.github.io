@@ -17,29 +17,22 @@ body.quarkdown.quarkdown-plain {
 }
 
 /* 侧边栏绝对/固定定位，保证正文完美居中 */
-body.quarkdown.quarkdown-plain > aside.margin-area {
+body.quarkdown.quarkdown-plain > nav.sidebar {
   position: fixed !important;
   top: 6rem !important;
+  left: 2rem !important;
   width: 16rem !important;
   max-height: calc(100vh - 10rem) !important;
   overflow-y: auto !important;
   z-index: 10 !important;
 }
 
-body.quarkdown.quarkdown-plain > aside#margin-area-left {
-  left: 2rem !important;
-}
-
-body.quarkdown.quarkdown-plain > aside#margin-area-right {
-  right: 2rem !important;
-}
-
-body.quarkdown.quarkdown-plain > aside.margin-area:empty {
+body.quarkdown.quarkdown-plain > aside.margin-area {
   display: none !important;
 }
 
 @media (max-width: 1200px) {
-  body.quarkdown.quarkdown-plain > aside.margin-area {
+  body.quarkdown.quarkdown-plain > nav.sidebar {
     display: none !important;
   }
 }
