@@ -37,35 +37,17 @@ body,
 
 body.quarkdown.quarkdown-plain {
   display: flex !important;
-  flex-direction: row !important;
   justify-content: center !important;
-  min-height: 100vh !important;
+}
+
+body.quarkdown.quarkdown-plain > aside.margin-area:empty {
+  flex: 0 0 0 !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
   margin: 0 !important;
-  padding: 0 1.5rem !important;
-  position: relative !important;
-}
-
-/* 侧边栏绝对/固定定位，保证正文完美居中 */
-body.quarkdown.quarkdown-plain > nav.sidebar {
-  position: fixed !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  right: 2rem !important;
-  left: auto !important;
-  width: 16rem !important;
-  max-height: 80vh !important;
-  overflow-y: auto !important;
-  z-index: 10 !important;
-}
-
-body.quarkdown.quarkdown-plain > aside.margin-area {
-  display: none !important;
-}
-
-@media (max-width: 1200px) {
-  body.quarkdown.quarkdown-plain > nav.sidebar {
-    display: none !important;
-  }
+  padding: 0 !important;
+  border: none !important;
 }
 
 body.quarkdown.quarkdown-plain > main {
@@ -74,7 +56,6 @@ body.quarkdown.quarkdown-plain > main {
   max-width: var(--qd-content-width, 45rem) !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  box-sizing: border-box !important;
 }
 
 h1 {
@@ -527,6 +508,25 @@ blockquote.warning::before {
 
 
 
+</style><style>
+/* 专栏详情页特有：侧边栏在右侧垂直居中悬浮 */
+body.quarkdown.quarkdown-plain > nav.sidebar {
+    position: fixed !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 2rem !important;
+    left: auto !important;
+    width: 16rem !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important;
+    z-index: 10 !important;
+}
+
+@media (max-width: 1200px) {
+    body.quarkdown.quarkdown-plain > nav.sidebar {
+        display: none !important;
+    }
+}
 </style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p><p>•</p><p><a href="/network-guide/index.html">Guide Index</a></p></div></div><h1 class="page-break" id="-04如何申请谷歌账号-google-account">🆔 04｜如何申请谷歌账号 (Google Account)</h1><p>当你已经能够成功访问国际互联网后，接下来最重要的一件事能让你真正成为“数字公民”：拥有一个属于自己的谷歌账号。</p><h2 id="为什么要拥有一个谷歌账号">为什么要拥有一个谷歌账号？</h2><p>谷歌账号不仅仅是一个邮箱，它是你作为“全球数字公民”的基础身份标识：</p><ul><li><strong>万能钥匙</strong>：一键登录 YouTube、Google Maps、Google Drive 等核心服务。</li><li><strong>AI 时代的通行证</strong>：目前最主流的 AI 工具（如 ChatGPT、Claude、Gemini）大多支持通过谷歌账号直接关联登录，省去繁杂的注册流程。</li><li><strong>跨平台同步</strong>：让你的搜索记录、浏览器书签、联系人在手机、平板和电脑间无缝同步。</li></ul><h2 id="_1-如何申请谷歌账号-google-account">1. 如何申请谷歌账号 (Google Account)</h2><p>谷歌账号是你开启全球互联网服务的核心。</p><ul><li><strong>官方申请地址</strong>：<a href="https://accounts.google.com/signup">https://accounts.google.com/signup</a></li></ul><h3 id="申请要点">申请要点：</h3><ol><li><strong>环境纯净</strong>: 在申请时，确保你的 VPN 节点是稳定的（建议选择美国、新加坡或日本）。</li><li><strong>手机号验证</strong>: 现在注册谷歌账号必须通过手机号验证。<strong>核心提醒</strong>：目前谷歌已基本<strong>不再支持中国大陆 (+86) 手机号</strong>进行注册验证，常会提示“此号码无法用于验证”。<ul><li><strong>最佳方案</strong>：建议使用实体的<strong>香港电话卡 (HK)</strong> 或 <strong>美国电话卡 (US)</strong>（如我们在《资产清单》中提到的 MySim 或 ENC Mobile），这些卡片目前可以 100% 验证成功。</li></ul></li><li><strong>安全绑定</strong>: 注册成功后，务必绑定辅助邮箱，开启两步验证，防止账号被封。</li></ol><h3 id="-注册注意事项-避坑小贴士">💡 注册注意事项 (避坑小贴士)：</h3><ul><li><strong>使用无痕模式</strong>：建议在浏览器开启“无痕/私密窗口”进行注册，避免原有 Cookie 或缓存干扰识别环境。</li><li><strong>年龄设置建议</strong>：填写的出生年份建议确保年龄<strong>超过 18 岁</strong>（例如 2000 年以前），否则账号会被列入“青少年保护模式”，导致无法使用部分 AI 功能或访问特定视频内容。</li><li><strong>保持节点稳定</strong>：在注册全过程中，请保持 VPN 线路稳定，切勿中途切换节点或开关 VPN，否则极易触发防欺诈系统导致注册失败。</li><li><strong>备选入口 (App)</strong>：如果 PC 端网页注册多次提示验证失败，可以尝试在手机上下载 <strong>Gmail 或 YouTube App</strong>，通过 App 内部的“创建账号”入口进行操作，App 端的风控通常比网页端更宽松。</li></ul><hr /><blockquote><p><strong>结语</strong>: 掌握了账号申请，你就拥有了自由探索全球知识库的“数字通行证”。</p></blockquote><div class="container fullwidth pagination-container">
     <div style="display: flex; gap: 16px; width: 100%;"><p><a href=" 03_quick_access.html " class="pagination-card prev-card">
         <span class="prev-label">← 上一章</span>
