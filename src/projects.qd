@@ -3,6 +3,6 @@
 .container classname:{project-cards} fullwidth:{yes}
 
     .container classname:{project-card}
-        [Toward a Free & Secure Web](https://youmind.com/b/XeKinBIcaRXta3) `Open source`
+        [Toward a Free & Secure Web](/network-guide/index.html) `Book`
         
-        Join Brett on the journey to a freer, safer internet — an open-source book built with YouMind.
+        Join Brett on the journey to a freer, safer internet — an open-source guide built locally.

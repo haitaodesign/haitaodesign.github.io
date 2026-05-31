@@ -1,0 +1,9 @@
+.include {../setup.qd}
+
+.cssproperties
+   - background-color: #fafafa
+   - main-color: #18181b
+   - heading-color: #09090b
+   - link-color: #2563eb
+
+.read {../stylesheets/style.css}::css
