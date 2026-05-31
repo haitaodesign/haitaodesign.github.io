@@ -40,3 +40,18 @@
     tbody tr:hover {
         background-color: var(--qd-selected-background-color);
     }
+
+    /* 正文链接高亮样式 */
+    main a:not(nav a) {
+        color: var(--qd-link-color, inherit);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-color: var(--qd-main-color-muted);
+        font-weight: 500;
+        transition: all 0.15s ease;
+    }
+
+    main a:not(nav a):hover {
+        color: var(--qd-heading-color);
+        text-decoration-color: var(--qd-heading-color);
+    }
