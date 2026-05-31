@@ -297,6 +297,133 @@ a:not(.sidebar a, .blog-item-link-wrapper)::after {
 .site-footer a::after {
   content: none !important;
 }
+
+/* Callouts / Blockquotes */
+blockquote {
+  margin: 1.5rem 0 !important;
+  padding: 1.25rem 1.5rem !important;
+  border-left: 4px solid #e4e4e7 !important;
+  background-color: #f4f4f5 !important;
+  border-radius: 0 8px 8px 0 !important;
+  color: #3f3f46 !important;
+}
+
+blockquote::before {
+  content: var(--quote-type-label) !important;
+  display: block !important;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.5rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+blockquote p {
+  margin: 0 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Tip */
+blockquote.tip {
+  border-left-color: #22c55e !important;
+  background-color: #f0fdf4 !important;
+  color: #166534 !important;
+}
+blockquote.tip::before {
+  color: #15803d !important;
+}
+
+/* Note */
+blockquote.note {
+  border-left-color: #3b82f6 !important;
+  background-color: #eff6ff !important;
+  color: #1e40af !important;
+}
+blockquote.note::before {
+  color: #1d4ed8 !important;
+}
+
+/* Important */
+blockquote.important {
+  border-left-color: #f59e0b !important;
+  background-color: #fffbeb !important;
+  color: #92400e !important;
+}
+blockquote.important::before {
+  color: #b45309 !important;
+}
+
+/* Warning */
+blockquote.warning {
+  border-left-color: #ef4444 !important;
+  background-color: #fef2f2 !important;
+  color: #991b1b !important;
+}
+blockquote.warning::before {
+  color: #b91c1c !important;
+}
+
+/* Pagination Container & Cards */
+.pagination-container {
+  margin-top: 4rem !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid #e4e4e7 !important;
+}
+
+.pagination-container .stack-row {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1rem !important;
+  width: 100% !important;
+}
+
+.pagination-card {
+  flex: 1 1 0% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 1.25rem !important;
+  border: 1px solid #e4e4e7 !important;
+  border-radius: 12px !important;
+  background-color: #ffffff !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+}
+
+.pagination-card:hover {
+  background-color: #fafafa !important;
+  border-color: #d4d4d8 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.pagination-card.next-card {
+  text-align: right !important;
+  align-items: flex-end !important;
+}
+
+.pagination-card a {
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  color: #71717a !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.pagination-card:hover a {
+  text-decoration: none !important;
+  color: #18181b !important;
+}
+
+.pagination-title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #18181b !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
 </style><h1 class="page-break" id="brett-old-sea">Brett (Old Sea)</h1><h2 id="about">About</h2><p><strong>Brett (Old Sea)</strong> — Full-stack developer</p><div style="justify-content: flex-start; align-items: center;" class="stack stack-row"><div class="clip clip-circle"><div class="container"><figure><img src="https://avatars.githubusercontent.com/u/14287992?v=4" alt="" style="width: 64.0px;" /></figure></div></div><p>&larr; <a href="https://github.com/haitaodesign">that&rsquo;s me</a></p></div><p>This site is built with <a href="https://github.com/iamgio/quarkdown">Quarkdown</a>. I write in <span class="codespan-content"><code>.qd</code></span> files and publish static pages—no heavy frontend setup.</p><p>Site: <a href="https://haitaodesign.github.io">https://haitaodesign.github.io</a> · Source: <a href="https://github.com/haitaodesign/haitaodesign.github.io">GitHub</a></p><h2 id="projects">Projects</h2><div class="container fullwidth project-cards"><div class="container project-card"><p><a href="/network-guide/index.html">Toward a Free &amp; Secure Web</a> <span class="codespan-content"><code>Book</code></span></p><p>Join Brett on the journey to a freer, safer internet — an open-source guide built locally.</p></div></div><h2 id="contact">Contact</h2><div style="grid-template-columns: auto auto; justify-content: flex-start; align-items: center; row-gap: 1.0cm; column-gap: 1.0cm;" class="stack stack-grid"><p><a href="https://github.com/haitaodesign">GitHub</a><br /><span class="codespan-content"><code>haitaodesign</code></span></p><p><a href="https://github.com/haitaodesign/haitaodesign.github.io">Repository</a><br /><span class="codespan-content"><code>haitaodesign.github.io</code></span></p><p><a href="mailto:lihaitaodesign@gmail.com">Email</a><br /><span class="codespan-content"><code>lihaitaodesign@gmail.com</code></span></p></div><h2 id="blog">Blog</h2><div class="container fullwidth blog-container"><div class="container blog-item"><div class="container blog-item-content"><a href="./2026-05-17-hello">2026-05-17-hello</a><p></p><style data-hidden="">:root { --qd-background-color: #ffffff !important; --qd-main-color: #18181b !important; --qd-heading-color: #09090b !important; --qd-heading-font-size: 1.125em !important; --qd-link-color: #18181b !important; }</style><style data-hidden="">/* shadcn/ui-inspired zinc theme — neutral, minimal */
 /* Tokens: https://ui.shadcn.com/themes (zinc, light) */
 
@@ -567,6 +694,133 @@ a:not(.sidebar a, .blog-item-link-wrapper)::after {
 .site-footer a::after {
   content: none !important;
 }
+
+/* Callouts / Blockquotes */
+blockquote {
+  margin: 1.5rem 0 !important;
+  padding: 1.25rem 1.5rem !important;
+  border-left: 4px solid #e4e4e7 !important;
+  background-color: #f4f4f5 !important;
+  border-radius: 0 8px 8px 0 !important;
+  color: #3f3f46 !important;
+}
+
+blockquote::before {
+  content: var(--quote-type-label) !important;
+  display: block !important;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.5rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+blockquote p {
+  margin: 0 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Tip */
+blockquote.tip {
+  border-left-color: #22c55e !important;
+  background-color: #f0fdf4 !important;
+  color: #166534 !important;
+}
+blockquote.tip::before {
+  color: #15803d !important;
+}
+
+/* Note */
+blockquote.note {
+  border-left-color: #3b82f6 !important;
+  background-color: #eff6ff !important;
+  color: #1e40af !important;
+}
+blockquote.note::before {
+  color: #1d4ed8 !important;
+}
+
+/* Important */
+blockquote.important {
+  border-left-color: #f59e0b !important;
+  background-color: #fffbeb !important;
+  color: #92400e !important;
+}
+blockquote.important::before {
+  color: #b45309 !important;
+}
+
+/* Warning */
+blockquote.warning {
+  border-left-color: #ef4444 !important;
+  background-color: #fef2f2 !important;
+  color: #991b1b !important;
+}
+blockquote.warning::before {
+  color: #b91c1c !important;
+}
+
+/* Pagination Container & Cards */
+.pagination-container {
+  margin-top: 4rem !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid #e4e4e7 !important;
+}
+
+.pagination-container .stack-row {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1rem !important;
+  width: 100% !important;
+}
+
+.pagination-card {
+  flex: 1 1 0% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 1.25rem !important;
+  border: 1px solid #e4e4e7 !important;
+  border-radius: 12px !important;
+  background-color: #ffffff !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+}
+
+.pagination-card:hover {
+  background-color: #fafafa !important;
+  border-color: #d4d4d8 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.pagination-card.next-card {
+  text-align: right !important;
+  align-items: flex-end !important;
+}
+
+.pagination-card a {
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  color: #71717a !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.pagination-card:hover a {
+  text-decoration: none !important;
+  color: #18181b !important;
+}
+
+.pagination-title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #18181b !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
 </style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p></div></div><span class="blog-date">May 17, 2026</span><h1 class="page-break" id="hello-world">Hello, world</h1><p>First post on this blog. The site and this page are built from <span class="codespan-content"><code>.qd</code></span> sources with <a href="https://quarkdown.com">Quarkdown</a> and published to the <span class="codespan-content"><code>dist</code></span> branch via GitHub Actions.</p><p>Source: <a href="https://github.com/haitaodesign/haitaodesign.github.io">haitaodesign/haitaodesign.github.io</a>.</p><p>More posts when I have something worth sharing.</p></div></div></div><div class="container fullwidth site-footer"></div><p>© 2026 Brett • Built with <a href="https://github.com/iamgio/quarkdown">Quarkdown</a></p><script>document.addEventListener("DOMContentLoaded", function () {
   const blogItems = document.querySelectorAll('.blog-item');
   Array.from(blogItems).forEach(blogItem => {

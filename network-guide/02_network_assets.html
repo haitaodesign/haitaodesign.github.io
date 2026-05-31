@@ -297,9 +297,136 @@ a:not(.sidebar a, .blog-item-link-wrapper)::after {
 .site-footer a::after {
   content: none !important;
 }
+
+/* Callouts / Blockquotes */
+blockquote {
+  margin: 1.5rem 0 !important;
+  padding: 1.25rem 1.5rem !important;
+  border-left: 4px solid #e4e4e7 !important;
+  background-color: #f4f4f5 !important;
+  border-radius: 0 8px 8px 0 !important;
+  color: #3f3f46 !important;
+}
+
+blockquote::before {
+  content: var(--quote-type-label) !important;
+  display: block !important;
+  font-weight: 600 !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.5rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+blockquote p {
+  margin: 0 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Tip */
+blockquote.tip {
+  border-left-color: #22c55e !important;
+  background-color: #f0fdf4 !important;
+  color: #166534 !important;
+}
+blockquote.tip::before {
+  color: #15803d !important;
+}
+
+/* Note */
+blockquote.note {
+  border-left-color: #3b82f6 !important;
+  background-color: #eff6ff !important;
+  color: #1e40af !important;
+}
+blockquote.note::before {
+  color: #1d4ed8 !important;
+}
+
+/* Important */
+blockquote.important {
+  border-left-color: #f59e0b !important;
+  background-color: #fffbeb !important;
+  color: #92400e !important;
+}
+blockquote.important::before {
+  color: #b45309 !important;
+}
+
+/* Warning */
+blockquote.warning {
+  border-left-color: #ef4444 !important;
+  background-color: #fef2f2 !important;
+  color: #991b1b !important;
+}
+blockquote.warning::before {
+  color: #b91c1c !important;
+}
+
+/* Pagination Container & Cards */
+.pagination-container {
+  margin-top: 4rem !important;
+  padding-top: 2rem !important;
+  border-top: 1px solid #e4e4e7 !important;
+}
+
+.pagination-container .stack-row {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1rem !important;
+  width: 100% !important;
+}
+
+.pagination-card {
+  flex: 1 1 0% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 1.25rem !important;
+  border: 1px solid #e4e4e7 !important;
+  border-radius: 12px !important;
+  background-color: #ffffff !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+}
+
+.pagination-card:hover {
+  background-color: #fafafa !important;
+  border-color: #d4d4d8 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.pagination-card.next-card {
+  text-align: right !important;
+  align-items: flex-end !important;
+}
+
+.pagination-card a {
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  color: #71717a !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.pagination-card:hover a {
+  text-decoration: none !important;
+  color: #18181b !important;
+}
+
+.pagination-title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #18181b !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
 </style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p><p>•</p><p><a href="/network-guide/index.html">Guide Index</a></p></div></div><blockquote><p>跟 Brett 一起，通往自由与安全的网络世界</p></blockquote><h2 id="状态内容填充中-">状态：内容填充中 ✍️</h2><hr /><blockquote class="tip" style="--quote-type-label: 'Tip';" data-labeled=""><p>全球互联网极简访问链路：设备与工具清单
 本章节用于梳理一套适合普通人的硬软件环境，确保链路的高可用性与易操作性。</p></blockquote><h2 id="_1-硬件设备-hardware">1. 硬件设备 (Hardware)</h2><table><thead><tr><th align="left">设备名称</th><th align="left">主要用途</th><th align="left">芯片 (Chip)</th><th align="left">内存 (Memory)</th><th align="left">存储 (Storage)</th><th align="left">状态/备注</th></tr></thead><tbody><tr><td align="left"><strong>MacBook Pro 14&rdquo;</strong></td><td align="left">办公/开发/学习</td><td align="left">M5 Pro (12C CPU/18C GPU)</td><td align="left">64GB 统一内存</td><td align="left">2TB SSD</td><td align="left">主力生产力工具</td></tr><tr><td align="left"><strong>iPhone 16 Pro Max</strong></td><td align="left">移动访问/安全验证</td><td align="left">A18 Pro 芯片</td><td align="left">-</td><td align="left">512GB</td><td align="left">核心移动终端</td></tr><tr><td align="left"><strong>Redmi Note 12</strong></td><td align="left">安卓备用/测试</td><td align="left">骁龙 4 Gen 1</td><td align="left">8GB</td><td align="left">128GB</td><td align="left">Android 环境测试</td></tr></tbody></table><h2 id="_2-核心软件-software-stack">2. 核心软件 (Software Stack)</h2><table><thead><tr><th align="left">软件/服务名称</th><th align="left">类型</th><th align="left">主要功能</th></tr></thead><tbody><tr><td align="left"><strong>Google Chrome</strong></td><td align="left">浏览器</td><td align="left">全球化办公与学习的基础入口</td></tr><tr><td align="left"><strong>Gmail</strong></td><td align="left">电子邮箱</td><td align="left">核心身份标识 / 接收验证码</td></tr><tr><td align="left"><strong>Google.com</strong></td><td align="left">搜索引擎</td><td align="left">全球资讯搜索与验证</td></tr><tr><td align="left"><strong>Forest</strong></td><td align="left">网络代理</td><td align="left">极简连接服务 (原 MilkCat 迁移)</td></tr><tr><td align="left"><strong>Shadowrocket</strong></td><td align="left">代理工具</td><td align="left">iOS 移动端连接 (小火箭)</td></tr><tr><td align="left"><strong>Gemini</strong></td><td align="left">AI 助手</td><td align="left">智能对话与内容创作辅助</td></tr></tbody></table><h2 id="_3-基础资质与物理资产-identity-amp-physical-assets">3. 基础资质与物理资产 (Identity &amp; Physical Assets)</h2><table><thead><tr><th align="left">资产类型</th><th align="left">名称/供应商</th><th align="left">主要用途</th><th align="left">维护成本/方式</th></tr></thead><tbody><tr><td align="left"><strong>身份证明</strong></td><td align="left"><strong>中华人民共和国护照</strong></td><td align="left">国际通用身份验证 (KYC)</td><td align="left">核心必备</td></tr><tr><td align="left"><strong>身份证明</strong></td><td align="left"><strong>往来港澳通行证</strong></td><td align="left">线下赴港开户/激活资产</td><td align="left">核心必备</td></tr><tr><td align="left"><strong>通信资产</strong></td><td align="left"><strong><a href="https://www.encmobile.com/">ENC Mobile (美国)</a></strong></td><td align="left">长期稳定美号 / 注册主流平台</td><td align="left">邮寄国内 / $10月租</td></tr><tr><td align="left"><strong>通信资产</strong></td><td align="left"><strong>中移香港 CMHK</strong></td><td align="left">极简港号 / 接收验证码</td><td align="left">需港地购入 / 支持国内激活</td></tr><tr><td align="left"><strong>金融资产</strong></td><td align="left"><strong>招商银行 Visa 信用卡</strong></td><td align="left">国内发卡 / 绑定 Apple Pay</td><td align="left">全球线上消费</td></tr><tr><td align="left"><strong>金融资产</strong></td><td align="left"><strong>香港汇丰银行 (HSBC)</strong></td><td align="left">实体账户 / 全球资金调度</td><td align="left">线下开户 / 卓越体验</td></tr><tr><td align="left"><strong>金融资产</strong></td><td align="left"><strong>众安银行 (ZA Bank)</strong></td><td align="left">数字银行 / 操作极致便捷</td><td align="left">线上开户 (需在港)</td></tr></tbody></table><h2 id="_4-数字账号与虚拟资产-digital-accounts">4. 数字账号与虚拟资产 (Digital Accounts)</h2><table><thead><tr><th align="left">账号类型</th><th align="left">名称/服务商</th><th align="left">主要用途</th><th align="left">获取方式</th></tr></thead><tbody><tr><td align="left"><strong>基础邮箱</strong></td><td align="left"><strong>Gmail</strong></td><td align="left">核心数字身份 / 平台注册</td><td align="left">必备资产</td></tr><tr><td align="left"><strong>海外 ID</strong></td><td align="left"><strong>美区 Apple ID</strong></td><td align="left">下载海外 App (小火箭等)</td><td align="left">自主注册，独享安全</td></tr><tr><td align="left"><strong>支付账号</strong></td><td align="left"><strong>美区 PayPal</strong></td><td align="left">境外线上支付 / 订阅服务</td><td align="left">自主注册 (需美号/美卡)</td></tr></tbody></table><h2 id="_5-付费服务-subscription-amp-paid">5. 付费服务 (Subscription &amp; Paid)</h2><table><thead><tr><th align="left">服务名称</th><th align="left">费用/周期</th><th align="left">核心价值</th><th align="left">到期时间</th></tr></thead><tbody><tr><td align="left"><strong>Forest</strong></td><td align="left">￥320 / 年</td><td align="left">主力代理 (200G/月)</td><td align="left">核心连接成本</td></tr><tr><td align="left"><strong>魔戒 (Mojie)</strong></td><td align="left">￥1-50 (按量)</td><td align="left"><strong>新手首选 / 备用金牌</strong></td><td align="left">流量用完为止</td></tr><tr><td align="left"><strong>Gemini Pro</strong></td><td align="left">$20 / 月</td><td align="left">AI 助手高级版</td><td align="left">核心 AI 订阅</td></tr><tr><td align="left"><strong>ENC Mobile</strong></td><td align="left">￥10 / 月</td><td align="left">美国电话卡保号</td><td align="left">核心通信资产</td></tr><tr><td align="left"><strong>MySim 5G</strong></td><td align="left">48 HKD / 半年</td><td align="left">香港充值卡保号</td><td align="left">到期充值延长</td></tr></tbody></table><blockquote class="note" style="--quote-type-label: 'Note';" data-labeled=""><p>关于服务商选择建议</p><ol><li><strong>Forest (原奶猫)</strong>: 主力稳定之选。官方站点：<a href="https://cn.forest2026.com/">https://cn.forest2026.com/</a> | <a href="https://cn.forest2026.com/register?code=ZIuUNrO0">专属邀请注册</a></li><li><strong>魔戒 (Mojie)</strong>: <strong>强烈建议新手注册</strong>。<ul><li><strong>优势</strong>: 国内网络直接访问（无需翻墙即可注册下载），按流量付费（1元起，不限时）。</li><li><strong>邀请链接</strong>: <a href="https://47.112.97.173:5000/#/register?code=ckRczTHV">点击注册魔戒 (IP直连)</a></li></ul></li></ol></blockquote><hr /><h2 id="_6-链路优化方案-初始方案">6. 链路优化方案 (初始方案)</h2><p>基于 Brett 的分享，当前最佳实践链路如下：</p><ol><li><strong>基础链路</strong>：Forest 为主 (稳定)，魔戒为辅 (低成本备用)。</li><li><strong>移动端</strong>：使用自主注册的美区 Apple ID，配合招行全币种卡或礼品卡购买 Shadowrocket。</li><li><strong>支付突破</strong>：利用 2026 年 Apple Pay 支持国内 Visa 的特性，降低 ChatGPT/Claude 订阅被风控的概率。</li></ol><h2 id="_7-费用成本核算-annual-cost-accounting">7. 费用成本核算 (Annual Cost Accounting)</h2><blockquote class="important" style="--quote-type-label: 'Important';" data-labeled=""><p>成本控制目标
-将每年的全球化网络基础维护成本控制在 <strong>￥1000 以内</strong>（不含核心 AI 生产力工具）。若计入 Gemini Pro 与美号保号成本，年度总预算约为 <strong>￥3000</strong>。</p></blockquote><h3 id="年度开支明细">年度开支明细</h3><table><thead><tr><th align="left">类别</th><th align="left">服务/资产名称</th><th align="left">原始费用 (USD/HKD)</th><th align="left">年度预估 (CNY)</th><th align="left">权重</th><th align="left">备注</th></tr></thead><tbody><tr><td align="left"><strong>基础网络</strong></td><td align="left">Forest (主力)</td><td align="left">$45 / yr</td><td align="left">￥326</td><td align="left">10.8%</td><td align="left">极简连接服务 (USD)</td></tr><tr><td align="left"><strong>AI 生产力</strong></td><td align="left"><strong>Gemini Pro</strong></td><td align="left"><strong>$20 / mo</strong></td><td align="left"><strong>￥1740</strong></td><td align="left"><strong>57.5%</strong></td><td align="left"><strong>核心 AI 生产力 (USD)</strong></td></tr><tr><td align="left"><strong>通信保号</strong></td><td align="left"><strong>ENC Mobile (美)</strong></td><td align="left"><strong>$10 / mo</strong></td><td align="left"><strong>￥870</strong></td><td align="left"><strong>28.8%</strong></td><td align="left"><strong>美号长期持有 (USD)</strong></td></tr><tr><td align="left"><strong>通信保号</strong></td><td align="left">MySim 5G (港)</td><td align="left">48 HKD / 半年</td><td align="left">￥89</td><td align="left">2.9%</td><td align="left">备用通信资产 (HKD)</td></tr><tr><td align="left"><strong>合计</strong></td><td align="left">-</td><td align="left">-</td><td align="left"><strong>￥3025</strong></td><td align="left"><strong>100%</strong></td><td align="left"><strong>约 ￥252/月</strong></td></tr></tbody></table><h3 id="优化建议-roi">优化建议 (ROI)</h3><ol><li><strong>低成本通信方案</strong>：对于个人用户，建议优先使用 <strong>MySim 港卡</strong>，其半年度 48 HKD 的保号成本是目前满足全球化基础验证的最优解。</li><li><strong>美号保号策略</strong>：官方渠道 $10/月，稳定安全；需配合支持 Wi-Fi Calling 的机型。</li><li><strong>网络冗余</strong>：<strong>魔戒 (Mojie)</strong> 作为按量计费备用，国内可直接访问，是解决“第一个翻墙工具从哪下载”问题的最佳方案。</li><li><strong>动态调整</strong>：对于 AI 订阅，可随用随开。</li></ol><hr /><p><a href="01_why_share.html">← 为什么要建立全球化网络观？</a> | <a href="index.html">目录</a> | <a href="03_quick_access.html">三步快速跑通国际互联网访问 →</a></p></main>
+将每年的全球化网络基础维护成本控制在 <strong>￥1000 以内</strong>（不含核心 AI 生产力工具）。若计入 Gemini Pro 与美号保号成本，年度总预算约为 <strong>￥3000</strong>。</p></blockquote><h3 id="年度开支明细">年度开支明细</h3><table><thead><tr><th align="left">类别</th><th align="left">服务/资产名称</th><th align="left">原始费用 (USD/HKD)</th><th align="left">年度预估 (CNY)</th><th align="left">权重</th><th align="left">备注</th></tr></thead><tbody><tr><td align="left"><strong>基础网络</strong></td><td align="left">Forest (主力)</td><td align="left">$45 / yr</td><td align="left">￥326</td><td align="left">10.8%</td><td align="left">极简连接服务 (USD)</td></tr><tr><td align="left"><strong>AI 生产力</strong></td><td align="left"><strong>Gemini Pro</strong></td><td align="left"><strong>$20 / mo</strong></td><td align="left"><strong>￥1740</strong></td><td align="left"><strong>57.5%</strong></td><td align="left"><strong>核心 AI 生产力 (USD)</strong></td></tr><tr><td align="left"><strong>通信保号</strong></td><td align="left"><strong>ENC Mobile (美)</strong></td><td align="left"><strong>$10 / mo</strong></td><td align="left"><strong>￥870</strong></td><td align="left"><strong>28.8%</strong></td><td align="left"><strong>美号长期持有 (USD)</strong></td></tr><tr><td align="left"><strong>通信保号</strong></td><td align="left">MySim 5G (港)</td><td align="left">48 HKD / 半年</td><td align="left">￥89</td><td align="left">2.9%</td><td align="left">备用通信资产 (HKD)</td></tr><tr><td align="left"><strong>合计</strong></td><td align="left">-</td><td align="left">-</td><td align="left"><strong>￥3025</strong></td><td align="left"><strong>100%</strong></td><td align="left"><strong>约 ￥252/月</strong></td></tr></tbody></table><h3 id="优化建议-roi">优化建议 (ROI)</h3><ol><li><strong>低成本通信方案</strong>：对于个人用户，建议优先使用 <strong>MySim 港卡</strong>，其半年度 48 HKD 的保号成本是目前满足全球化基础验证的最优解。</li><li><strong>美号保号策略</strong>：官方渠道 $10/月，稳定安全；需配合支持 Wi-Fi Calling 的机型。</li><li><strong>网络冗余</strong>：<strong>魔戒 (Mojie)</strong> 作为按量计费备用，国内可直接访问，是解决“第一个翻墙工具从哪下载”问题的最佳方案。</li><li><strong>动态调整</strong>：对于 AI 订阅，可随用随开。</li></ol><div class="container fullwidth pagination-container"><div style="justify-content: flex-start; align-items: center; column-gap: 16.0px;" class="stack stack-row"><p><div class="container pagination-card prev-card"><a href=" 01_why_share.html "><span class="prev-label">← 上一章</span></a><div class="container pagination-title"><a href=" 01_why_share.html "> 01｜为什么要建立全球化网络观？ </a></div></div></p><p><div class="container pagination-card next-card"><a href=" 03_quick_access.html "><span class="next-label">下一章 →</span></a><div class="container pagination-title"><a href=" 03_quick_access.html "> 03｜三步快速跑通国际互联网访问 </a></div></div></p></div></div></main>
     <aside class="margin-area" id="margin-area-right"></aside>
   </body>
 </html>
