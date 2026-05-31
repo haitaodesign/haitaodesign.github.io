@@ -36,6 +36,7 @@ body,
 }
 
 body.quarkdown.quarkdown-plain {
+  display: flex !important;
   justify-content: center !important;
 }
 
@@ -51,6 +52,8 @@ body.quarkdown.quarkdown-plain > aside.margin-area:empty {
 
 body.quarkdown.quarkdown-plain > main {
   flex: 0 1 var(--qd-content-width, 45rem) !important;
+  width: 100% !important;
+  max-width: var(--qd-content-width, 45rem) !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -422,6 +425,24 @@ blockquote.warning::before {
   color: #18181b !important;
   margin: 0 !important;
   line-height: 1.4 !important;
+}
+
+/* Blog Navigation (Top) */
+.blog-navigation {
+  margin-bottom: 2rem !important;
+  width: 100% !important;
+}
+
+.blog-navigation .stack-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.blog-navigation .stack-row p {
+  margin: 0 !important;
 }
 
 </style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p><p>•</p><p><a href="/network-guide/index.html">Guide Index</a></p></div></div><blockquote><p>跟 Brett 一起，通往自由与安全的网络世界</p></blockquote><h2 id="状态内容填充中-">状态：内容填充中 ✍️</h2><hr /><blockquote class="tip" style="--quote-type-label: 'Tip';" data-labeled=""><p>全球互联网极简访问链路：设备与工具清单
