@@ -1,6 +1,5 @@
 .docname {全球化网络优化全指南}
-.include {setup.qd}
-.guidepost
+.include {docs}
 
 > 跟 Brett 一起，通往自由与安全的网络世界。
 
