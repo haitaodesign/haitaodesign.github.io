@@ -1,9 +1,14 @@
 .include {../setup.qd}
 
-.cssproperties
-   - background-color: #fafafa
-   - main-color: #18181b
-   - heading-color: #09090b
-   - link-color: #2563eb
+.function {guidepost}
+    .container classname:{blog-navigation} fullwidth:{yes}
+        .row gap:{12px} 
+            Brett (Old Sea)
+            
+            •
 
-.read {../stylesheets/style.css}::css
+            [Home](/)
+            
+            •
+            
+            [Guide Index](/network-guide/index.html)
