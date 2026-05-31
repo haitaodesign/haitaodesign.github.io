@@ -1,3 +1,42 @@
 .include {../_setup.qd}
 
 .theme {paperwhite} layout:{minimal}
+
+.css
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: calc(1.5 * var(--qd-block-margin, 2em)) 0;
+        font-size: 0.95em;
+        line-height: var(--qd-line-height, 1.5);
+        text-align: var(--qd-horizontal-alignment-local, start);
+        border-radius: var(--qd-box-border-radius, 8px);
+        overflow: hidden;
+        box-shadow: 0 0 0 1px var(--qd-page-content-border-color);
+    }
+
+    th {
+        background-color: var(--qd-selected-background-color);
+        color: var(--qd-heading-color);
+        font-weight: 600;
+        padding: 0.8em 1em;
+        border-bottom: 1px solid var(--qd-page-content-border-color);
+    }
+
+    td {
+        padding: 0.8em 1em;
+        border-bottom: 1px solid var(--qd-page-content-border-color);
+        color: var(--qd-main-color);
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    tbody tr {
+        transition: background-color 0.15s ease;
+    }
+
+    tbody tr:hover {
+        background-color: var(--qd-selected-background-color);
+    }
