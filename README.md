@@ -1,29 +1,36 @@
-# haitaodesign.github.io
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Brett's personal site. Built with [Quarkdown](https://github.com/iamgio/quarkdown), deployed by GitHub Actions.
+## Getting Started
 
-## Layout
-
-- `src/main.qd` — site entry
-- `src/blog/` — blog posts (`YYYY-MM-DD-slug.qd`)
-- `archive/index.html` — old static portal (reference only)
-
-## Build locally
+First, run the development server:
 
 ```bash
-# Install Quarkdown CLI: https://github.com/iamgio/quarkdown
-quarkdown c src/main.qd --out-name site --clean
-# Open quarkdown-output/site/index.html
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Deploy
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. Push to **`main`** to run [Build workflow](.github/workflows/build.yml)
-2. Output goes to the **`dist`** branch
-3. **Settings → Pages**: Deploy from branch **`dist`**, folder **`/ (root)`**
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## New blog post
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-1. Add `src/blog/YYYY-MM-DD-slug.qd`
-2. Copy the header from an existing post (`.docname`, `.include {template/setup.qd}`, `.blogpost date:{...}`)
-3. Push to `main` and wait for CI
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

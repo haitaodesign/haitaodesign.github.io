@@ -1,0 +1,9 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "node scripts/install-quarkdown.mjs",
+    "build": "quarkdown c src/main.qd --out-name site --clean --strict"
+  }
+}

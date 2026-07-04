@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "fumadocs-ui/style.css";
+
+@theme inline {
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #18181b;
+  --color-heading: #09090b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #09090b;
+    --color-foreground: #fafafa;
+    --color-heading: #ffffff;
+  }
+}
+
+:root.dark {
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+  --color-heading: #ffffff;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-heading);
+}
+
+a {
+  color: var(--color-foreground);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-heading);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

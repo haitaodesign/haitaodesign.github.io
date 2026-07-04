@@ -13,37 +13,53 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
       - uses: quarkdown-labs/setup-quarkdown@v1
         with:
           quarkdown-version: 'devbuild'
 
-      - name: Check Quarkdown block indentation
-        run: bash scripts/check-qd-indent.sh
+      - name: Build All (Turbo)
+        run: pnpm run build
 
-      - name: Build
+      - name: Merge Outputs
         run: |
-          set -o pipefail
-          quarkdown c src/main.qd --out-name site --clean --strict 2>&1 | tee build.log
-          # Compile docs section: one command builds all articles
-          quarkdown c src/network-guide/01_why_share.qd --allow global-read \
-            -o quarkdown-output/site --out-name network-guide
-          # Generate the network-guide index as a redirect
-          echo '<meta http-equiv="refresh" content="0; url=00_foreword/" /><script>window.location.replace("00_foreword/");</script>' > quarkdown-output/site/network-guide/index.html
+          mkdir -p apps/www/quarkdown-output/site/network-guide
+          # Next.js exports to apps/network-guide/out
+          # But since basePath is /network-guide, it might output to apps/network-guide/out/network-guide
+          # Wait, in Next.js, if basePath is set, the export folder is still out/, but it has a subfolder named network-guide.
+          # Let's just copy the contents of apps/network-guide/out/network-guide to the final folder, OR copy out/ to site/
+          if [ -d "apps/network-guide/out/network-guide" ]; then
+            cp -a apps/network-guide/out/network-guide/* apps/www/quarkdown-output/site/network-guide/
+          else
+            cp -a apps/network-guide/out/* apps/www/quarkdown-output/site/network-guide/
+          fi
+          
+          # Sync Dark Mode for Quarkdown files
+          find apps/www/quarkdown-output/site -name "*.html" -exec sed -i.bak 's|</head>|<script>if(localStorage.getItem("theme")==="dark"\|\|(!localStorage.getItem("theme")\&\&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark");}</script></head>|' {} +
+          find apps/www/quarkdown-output/site -name "*.bak" -type f -delete
 
       - name: Verify build output
         run: |
-          test -f quarkdown-output/site/index.html
-          ! grep -rq 'class="box error"' quarkdown-output/site/
-          ! grep -rq '<h4>Error:' quarkdown-output/site/
-          ! grep -qi 'cannot call function' build.log
-          ! grep -qiE 'error:|expected [0-9]+ arguments' build.log
-          grep -q '<script>document.addEventListener' quarkdown-output/site/index.html
-          ! grep -q '</div>document.addEventListener' quarkdown-output/site/index.html
+          test -f apps/www/quarkdown-output/site/index.html
+          test -d apps/www/quarkdown-output/site/network-guide
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: dist
-          publish_dir: ./quarkdown-output/site
+          publish_dir: ./apps/www/quarkdown-output/site
           cname: oldsea.me

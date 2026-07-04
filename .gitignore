@@ -1,21 +1,7 @@
-# Quarkdown
-**/output/
-quarkdown-output/
-output/
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-*.iml
-
-# OS
+node_modules
+.turbo
+apps/network-guide/.next
+apps/network-guide/out
+apps/www/quarkdown-output
+_old_quarkdown_backup
 .DS_Store
-Thumbs.db
-
-# Node
-node_modules/
-
-# Misc
-.claude/

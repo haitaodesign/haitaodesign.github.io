@@ -477,4 +477,64 @@ blockquote.warning::before {
   color: #18181b !important;
 }
 
+/* ------------------------
+   DARK MODE OVERRIDES
+------------------------ */
+html.dark body.quarkdown-plain,
+html.dark :root {
+  --qd-background-color: #09090b !important;
+  --qd-main-color: #fafafa !important;
+  --qd-heading-color: #ffffff !important;
+  --qd-link-color: #fafafa !important;
+}
 
+html.dark body.quarkdown-plain {
+  background-color: var(--qd-background-color) !important;
+  color: var(--qd-main-color) !important;
+}
+
+html.dark body.quarkdown-plain a:not(.sidebar a):hover {
+  color: #ffffff !important;
+}
+
+html.dark .avatar-badge {
+  color: #fafafa;
+  background: #27272a;
+  border-color: #3f3f46;
+}
+
+html.dark .project-card, html.dark .blog-item, html.dark .pagination-card {
+  background: #18181b;
+  border-color: #27272a;
+}
+html.dark .project-card:hover, html.dark .blog-item:hover, html.dark .pagination-card:hover {
+  background: #27272a;
+  border-color: #3f3f46;
+}
+html.dark .project-card .badge {
+  background: #27272a;
+  border-color: #3f3f46;
+  color: #a1a1aa;
+}
+html.dark .project-card p, html.dark .blog-date, html.dark .pagination-card .prev-label, html.dark .pagination-card .next-label, html.dark .site-footer, html.dark .site-footer a {
+  color: #a1a1aa !important;
+}
+html.dark .site-footer a:hover {
+  color: #fafafa !important;
+}
+html.dark .blog-item > .blog-item-content {
+  -webkit-mask-image: linear-gradient(to bottom, #fafafa 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #fafafa 55%, transparent 100%);
+}
+html.dark body.quarkdown-plain blockquote {
+  background-color: #27272a !important;
+  border-left-color: #3f3f46 !important;
+  color: #e4e4e7 !important;
+}
+html.dark .pagination-card:hover .prev-label,
+html.dark .pagination-card:hover .next-label {
+  color: #fafafa !important;
+}
+html.dark .pagination-title {
+  color: #fafafa !important;
+}
