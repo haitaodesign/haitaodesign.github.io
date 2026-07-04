@@ -350,6 +350,10 @@ body.quarkdown.quarkdown-paged .pagedjs_area {
   display: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  break-after: avoid;
+}
+
 .quarkdown.quarkdown p {
   margin-top: 0;
   margin-bottom: 0;
@@ -712,6 +716,10 @@ details > summary + p,
   stroke: var(--qd-mermaid-node-line-color) !important;
 }
 
+.quarkdown .file-tree.file-tree.file-tree {
+  font-family: var(--qd-code-font), monospace;
+  font-size: var(--qd-code-span-font-size);
+}
 .quarkdown .file-tree.file-tree.file-tree ul {
   list-style: none;
   margin: 0.5em 0 0 0.5em;
@@ -720,10 +728,6 @@ details > summary + p,
 .quarkdown .file-tree.file-tree.file-tree ul ul {
   padding-left: 1em;
   border-left: 1px solid var(--qd-main-color-muted);
-}
-.quarkdown .file-tree.file-tree.file-tree ul li {
-  font-family: var(--qd-code-font), monospace;
-  font-size: var(--qd-code-span-font-size);
 }
 .quarkdown .file-tree.file-tree.file-tree ul li::before {
   margin-right: 0.5em;
@@ -1001,6 +1005,9 @@ details > summary + p,
 }
 .quarkdown .container[style*=margin] > :not([style*=margin]):last-child {
   margin-bottom: 0 !important;
+}
+.quarkdown .container[style*=color] > :not([style*=color]) {
+  color: inherit !important;
 }
 .quarkdown .container > .stack {
   width: 100%;

@@ -25,7 +25,7 @@ body {
 </style>
     <script>prepare(new PlainDocument());</script>
 <template id="sidebar-template"><nav class="sidebar" role="doc-toc"><ol><li data-target-id="hello-world" data-depth="1"><a href="#hello-world">Hello, world</a></li></ol></nav>
-</template>  </head>
+</template>  <script>if(localStorage.getItem("theme")==="dark"||(!localStorage.getItem("theme")&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark");}</script></head>
   <body class="quarkdown quarkdown-plain">
     <aside class="margin-area" id="margin-area-left"></aside>
     <main><p></p><style data-hidden="">:root { --qd-background-color: #ffffff !important; --qd-main-color: #18181b !important; --qd-heading-color: #09090b !important; --qd-heading-font-size: 1.125em !important; --qd-link-color: #18181b !important; }</style><style data-hidden="">/* shadcn/ui-inspired zinc theme — neutral, minimal */
@@ -507,7 +507,67 @@ blockquote.warning::before {
   color: #18181b !important;
 }
 
+/* ------------------------
+   DARK MODE OVERRIDES
+------------------------ */
+html.dark body.quarkdown-plain,
+html.dark :root {
+  --qd-background-color: #09090b !important;
+  --qd-main-color: #fafafa !important;
+  --qd-heading-color: #ffffff !important;
+  --qd-link-color: #fafafa !important;
+}
 
+html.dark body.quarkdown-plain {
+  background-color: var(--qd-background-color) !important;
+  color: var(--qd-main-color) !important;
+}
+
+html.dark body.quarkdown-plain a:not(.sidebar a):hover {
+  color: #ffffff !important;
+}
+
+html.dark .avatar-badge {
+  color: #fafafa !important;
+  background: #27272a !important;
+  border-color: #3f3f46 !important;
+}
+
+html.dark .project-card, html.dark .blog-item, html.dark .pagination-card {
+  background: #18181b !important;
+  border-color: #27272a !important;
+}
+html.dark .project-card:hover, html.dark .blog-item:hover, html.dark .pagination-card:hover {
+  background: #27272a !important;
+  border-color: #3f3f46 !important;
+}
+html.dark .project-card .badge {
+  background: #27272a !important;
+  border-color: #3f3f46 !important;
+  color: #a1a1aa !important;
+}
+html.dark .project-card p, html.dark .blog-date, html.dark .pagination-card .prev-label, html.dark .pagination-card .next-label, html.dark .site-footer, html.dark .site-footer a {
+  color: #a1a1aa !important;
+}
+html.dark .site-footer a:hover {
+  color: #fafafa !important;
+}
+html.dark .blog-item > .blog-item-content {
+  -webkit-mask-image: linear-gradient(to bottom, #fafafa 55%, transparent 100%) !important;
+  mask-image: linear-gradient(to bottom, #fafafa 55%, transparent 100%) !important;
+}
+html.dark body.quarkdown-plain blockquote {
+  background-color: #27272a !important;
+  border-left-color: #3f3f46 !important;
+  color: #e4e4e7 !important;
+}
+html.dark .pagination-card:hover .prev-label,
+html.dark .pagination-card:hover .next-label {
+  color: #fafafa !important;
+}
+html.dark .pagination-title {
+  color: #fafafa !important;
+}
 </style><div class="container fullwidth blog-navigation"><div style="justify-content: flex-start; align-items: center; column-gap: 12.0px;" class="stack stack-row"><p>Brett (Old Sea)</p><p>•</p><p><a href="/">Home</a></p></div></div><span class="blog-date">May 17, 2026</span><h1 class="page-break" id="hello-world">Hello, world</h1><p>First post on this blog. The site and this page are built from <span class="codespan-content"><code>.qd</code></span> sources with <a href="https://quarkdown.com">Quarkdown</a> and published to the <span class="codespan-content"><code>dist</code></span> branch via GitHub Actions.</p><p>Source: <a href="https://github.com/haitaodesign/haitaodesign.github.io">haitaodesign/haitaodesign.github.io</a>.</p><p>More posts when I have something worth sharing.</p></main>
     <aside class="margin-area" id="margin-area-right"></aside>
   </body>
