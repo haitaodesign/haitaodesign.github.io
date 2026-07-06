@@ -1,11 +1,11 @@
 .include {../../setup.qd}
-.docdescription {Brett's blog post}
+.docdescription {Brett Lee's blog post}
 
 .function {blogpost}
     date?:
     .container classname:{blog-navigation} fullwidth:{yes}
         .row gap:{12px} 
-            Brett (Old Sea)
+            Brett Lee (Old Sea)
             
             •
 

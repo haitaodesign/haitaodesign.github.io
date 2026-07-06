@@ -1,17 +1,17 @@
-.docdescription {Brett's personal site — full-stack developer.}
+.docdescription {Brett Lee's personal site — full-stack developer.}
 .doclang {English}
 
 .theme {paperwhite} layout:{latex}
 .htmloptions baseurl:{https://haitaodesign.github.io}
 
 .dockeywords
-   - Brett
+   - Brett Lee
    - haitaodesign
    - quarkdown
    - blog
 
 .docauthors
-   - Brett (Old Sea)
+   - Brett Lee (Old Sea)
      - website: https://haitaodesign.github.io
 
 .font heading:{GoogleFonts:Outfit} 
