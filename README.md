@@ -107,7 +107,11 @@ Quarkdown **缩进敏感**，改完后建议 `pnpm build` 或 `pnpm preview` 验
 编辑 `apps/network-guide/content/network-guide/*.mdx`（frontmatter 含 `title`）。  
 静态资源放 `apps/network-guide/public/`。
 
-改 Next / Fumadocs 前：本仓库 Next 与常见资料可能不一致（见 [AGENTS.md](./AGENTS.md)）。先读子站依赖里的官方指南：`apps/network-guide/node_modules/next/dist/docs/`（需已 `pnpm install`）。
+改 Next / Fumadocs 相关代码前，先读本仓库已安装的 Next 文档（版本可能与常见教程不同）：
+
+`apps/network-guide/node_modules/next/dist/docs/`
+
+该目录在 `pnpm install` 之后才存在；从仓库根目录按上述相对路径打开即可。
 
 ## 发布
 
