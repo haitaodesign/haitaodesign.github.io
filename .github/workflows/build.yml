@@ -51,10 +51,18 @@ jobs:
           find apps/www/quarkdown-output/site -name "*.html" -exec sed -i.bak 's|</head>|<script>if(localStorage.getItem("theme")==="dark"\|\|(!localStorage.getItem("theme")\&\&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark");}</script></head>|' {} +
           find apps/www/quarkdown-output/site -name "*.bak" -type f -delete
 
+      - name: Generate sitemap and Quarkdown SEO tags
+        run: node scripts/postbuild-seo.mjs
+
       - name: Verify build output
         run: |
           test -f apps/www/quarkdown-output/site/index.html
           test -d apps/www/quarkdown-output/site/network-guide
+          test -f apps/www/quarkdown-output/site/sitemap.xml
+          test -f apps/www/quarkdown-output/site/robots.txt
+          test -f apps/www/quarkdown-output/site/og.jpg
+          grep -q 'https://oldsea.me/network-guide/' apps/www/quarkdown-output/site/sitemap.xml
+          grep -q 'Sitemap: https://oldsea.me/sitemap.xml' apps/www/quarkdown-output/site/robots.txt
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

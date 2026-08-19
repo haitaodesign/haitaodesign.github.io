@@ -119,4 +119,12 @@ Quarkdown **缩进敏感**，改完后建议 `pnpm build` 或 `pnpm preview` 验
 2. CI 构建、合并、注入暗色脚本后，写入 **`dist`** 分支
 3. GitHub Pages：Deploy from branch **`dist`**，folder **`/`**；CNAME 为 `oldsea.me`
 
+### Search Console（上线后）
+
+1. 确认 `https://oldsea.me/sitemap.xml` 返回 200，且含首页与 `/network-guide/` 各章
+2. 若 `/robots.txt` 仍是 Cloudflare Managed Content、没有 `Sitemap:` 行：在 Cloudflare 关掉托管 robots，或把 `Sitemap: https://oldsea.me/sitemap.xml` 写进托管规则
+3. 在 [Google Search Console](https://search.google.com/search-console) 提交 sitemap：`https://oldsea.me/sitemap.xml`
+4. 对首页、`/network-guide/00_foreword` 以及 01–07 用「网址检查」请求编入索引（每天少量即可）
+5. 几天后看「网页索引」里未编入原因；`haitaodesign.github.io` 不要当第二套站点去推，以 `oldsea.me` canonical 为准
+
 暗色主题脚本由 CI 与 `scripts/preview.sh` 在构建后注入，**不在** Quarkdown 源码里维护。
