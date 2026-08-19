@@ -5,7 +5,7 @@
 
 .includeall
    - about.qd
-   - projects.qd
+   - labs.qd
    - contacts.qd
    - blog.qd
    - footer.qd
