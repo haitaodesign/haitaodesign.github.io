@@ -1,0 +1,7 @@
+# Origin robots.txt for https://oldsea.me
+# If Cloudflare Managed robots is enabled, add the Sitemap line there too.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://oldsea.me/sitemap.xml
