@@ -1,5 +1,6 @@
 .docname {Hello, world}
 .include {template/setup.qd}
+.docdescription {Hello, world — first post on Old Sea, a static site built with Quarkdown and published via GitHub Actions.}
 .blogpost date:{May 17, 2026}
 
 First post on this blog. The site and this page are built from `.qd` sources with [Quarkdown](https://quarkdown.com) and published to the `dist` branch via GitHub Actions.

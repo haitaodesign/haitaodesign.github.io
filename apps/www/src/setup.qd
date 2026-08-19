@@ -1,18 +1,20 @@
-.docdescription {Brett Lee's personal site — full-stack developer.}
+.docdescription {Old Sea (Brett Lee) — full-stack developer becoming an AI engineer. Notes, projects, and a Chinese guide to overseas internet access.}
 .doclang {English}
 
 .theme {paperwhite} layout:{latex}
-.htmloptions baseurl:{https://haitaodesign.github.io}
+.htmloptions baseurl:{https://oldsea.me} title:{Old Sea / Brett Lee — Full-stack & AI}
 
 .dockeywords
+   - Old Sea
    - Brett Lee
+   - oldsea.me
    - haitaodesign
-   - quarkdown
-   - blog
+   - AI engineer
+   - 出海
 
 .docauthors
    - Old Sea (Brett Lee)
-     - website: https://haitaodesign.github.io
+     - website: https://oldsea.me
 
 .font heading:{GoogleFonts:Outfit} 
 

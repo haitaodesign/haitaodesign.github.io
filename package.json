@@ -5,7 +5,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "test": "node scripts/verify.mjs",
-    "preview": "bash scripts/preview.sh"
+    "preview": "bash scripts/preview.sh",
+    "seo": "node scripts/postbuild-seo.mjs"
   },
   "devDependencies": {
     "turbo": "latest"
